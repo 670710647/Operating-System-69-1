@@ -1,0 +1,263 @@
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
+public class Client {
+
+    private static final String HOST = "localhost";
+    private static final int PORT = 5000;
+
+    public static void main(String[] args) throws Exception {
+
+        //list รายชื่อไฟล์ที่โหลดได้
+        if (args.length == 1 && args[0].equalsIgnoreCase("list")) {
+            listFiles();
+            return;
+        }
+
+        if (args.length < 1 || args.length > 4) {
+            System.out.println(
+                    "Usage: java Client <filename> [traditional|nio] [workers] [destination]");
+            return;
+        }
+
+        String filename = args[0]; //ชื่อไฟล์
+
+        TransferMode mode = args.length >= 2
+                ? TransferMode.fromString(args[1]) // โหมด
+                : TransferMode.TRADITIONAL;
+
+        int workers = args.length >= 3
+                ? Integer.parseInt(args[2]) //จำนวน Worker
+                : 10; //ไม่ระบุจะเป็น10
+
+        Path downloadDir = args.length == 4
+                ? Paths.get(args[3])
+                : Paths.get("downloads");
+
+        if (workers < 1) { //ถ้าใส่น้อยกว่า 1 จะไม่เริ่มโหลด
+            System.out.println("Workers อย่างน้อยต้องเป็น 1");
+            return;
+        }
+        //System.out.println("Selected mode: " + mode);
+
+        listFiles();
+
+        long size = getFileSize(filename);
+
+        Path destination = downloadDir.resolve(filename);
+        Files.createDirectories(destination.getParent());
+
+        System.out.println("Save location: " + destination.toAbsolutePath());
+
+        // สร้างไฟล์และกำหนดขนาดปลายทางก่อนให้ Worker เขียน
+        try (java.io.RandomAccessFile file = new java.io.RandomAccessFile(destination.toFile(), "rw")) {
+            file.setLength(size);
+        }
+
+        ExecutorService pool = Executors.newFixedThreadPool(workers); //จน.เทรด
+        List<Future<Void>> futures = new ArrayList<>();
+
+        long startTime = System.nanoTime();
+
+        try {
+            for (int i = 0; i < workers; i++) {
+                long start = size * i / workers;
+                long end = size * (i + 1) / workers;
+                long length = end - start;
+
+                LoadWorker worker = new LoadWorker(
+                        HOST, PORT, filename,
+                        start, length, destination, mode);
+
+                futures.add(pool.submit(worker));
+            }
+
+            for (Future<Void> future : futures) {
+                future.get();
+            }
+        } catch (ExecutionException e) {
+            for (Future<Void> future : futures) {
+                future.cancel(true);
+            }
+
+            throw new RuntimeException(
+                    "Download failed", e.getCause());
+        } finally {
+            pool.shutdown();
+        }
+
+        long elapsedNanos = System.nanoTime() - startTime;
+        double elapsedSeconds = elapsedNanos / 1_000_000_000.0;
+        long downloadedSize = Files.size(destination);
+        boolean sizePassed = downloadedSize == size;
+
+        System.out.print("\n======================RESULT========================");
+        System.out.println("\nDownload finished");
+        System.out.println("File: " + destination.toAbsolutePath());
+        System.out.println("Expected size: " + size + " bytes");
+        System.out.println("Actual size:   " + downloadedSize + " bytes");
+        System.out.printf("Time: %.3f seconds%n", elapsedSeconds);
+
+        System.out.println("Size verification: "
+                + (sizePassed ? "PASS" : "FAIL"));
+
+        // show ขนาดไฟล์ size
+        double mb = downloadedSize / 1_000_000.0; //แปลงขนาดไฟล์จาก Byte เป็น MB
+        double throughput = elapsedSeconds > 0
+                ? mb / elapsedSeconds : 0;
+
+        // ตรวจสอบ hash ของไฟล์ต้นฉบับและไฟล์ดาวน์โหลด
+        Path original = Paths.get("server_files", filename);
+
+        String originalHash = sha256(original);
+        String downloadedHash = sha256(destination);
+
+        System.out.println();
+        System.out.println("Original SHA-256:   " + originalHash);
+        System.out.println("Downloaded SHA-256: " + downloadedHash);
+
+        boolean sha256Passed = originalHash.equals(downloadedHash);
+
+        System.out.println("SHA-256 verification: "
+                + (sha256Passed ? "PASS" : "FAIL"));
+
+        if (!sizePassed) {
+            throw new IOException("File size verification failed");
+        }
+
+        if (!sha256Passed) {
+            throw new IOException("SHA-256 verification failed");
+        }
+
+        //save result
+        System.out.printf("Throughput: %.2f MB/s%n", throughput);
+
+        saveResult(
+                filename,
+                mode,
+                workers,
+                downloadedSize,
+                elapsedSeconds,
+                throughput,
+                sizePassed,
+                sha256Passed,
+                downloadDir
+        );
+
+        System.out.println("Results saved to result/experiment_results.csv");
+        System.out.println("=====================================================");
+    }
+
+    private static void listFiles() throws IOException {
+        try (Socket socket = new Socket(HOST, PORT)) {
+            InputStream in = socket.getInputStream();
+            OutputStream out = socket.getOutputStream();
+
+            Protocol.sendLine(out, "LIST");
+
+            System.out.println("=========Available files==================");
+
+            String line;
+            while ((line = Protocol.readLine(in)) != null) {
+                if (line.equals("END")) {
+                    break;
+                }
+                System.out.println("  " + line);
+            }
+        }
+    }
+
+    private static long getFileSize(String filename) throws IOException {
+        try (Socket socket = new Socket(HOST, PORT)) {
+            InputStream in = socket.getInputStream();
+            OutputStream out = socket.getOutputStream();
+
+            Protocol.sendLine(out, "INFO " + filename); //Socket  ส่งINFO มา + ตัวจบบรรทัด Server ตรวจ INFO ค้นขนาดไฟล์ ส่งกลับมาให้
+
+            String response = Protocol.readLine(in);
+
+            if (response == null || !response.startsWith("SIZE ")) {
+                throw new IOException("Server response: " + response);
+            }
+
+            return Long.parseLong(response.substring(5).trim());
+        }
+    }
+
+    private static void saveResult(String filename, TransferMode mode, int workers, long sizeBytes, double elapsedSeconds, double throughput, boolean sizePassed, boolean sha256Passed, Path downloadDir) throws IOException {
+
+        Path dir = Paths.get("result", downloadDir.getFileName().toString());
+        Files.createDirectories(dir);
+        Path csv = dir.resolve("experiment_results.csv");
+
+        boolean newFile = !Files.exists(csv)
+                || Files.size(csv) == 0;
+
+        try (BufferedWriter writer = Files.newBufferedWriter(
+                csv,
+                StandardOpenOption.CREATE,
+                StandardOpenOption.APPEND)) {
+
+            if (newFile) { //คอลัมน์result
+                writer.write(
+                        "Filename,Mode,Workers,SizeBytes,TimeSeconds,ThroughputMBs,SizeCheck,SHA256Check");
+                writer.newLine();
+            }
+
+            writer.write(String.format( //result info
+                    Locale.US,
+                    "%s,%s,%d,%d,%.3f,%.3f,%s,%s",
+                    filename,
+                    mode,
+                    workers,
+                    sizeBytes,
+                    elapsedSeconds,
+                    throughput,
+                    sizePassed ? "PASS" : "FAIL",
+                    sha256Passed ? "PASS" : "FAIL"
+            ));
+
+            writer.newLine();
+        }
+    }
+
+    private static String sha256(Path path)
+            throws IOException, NoSuchAlgorithmException {
+        MessageDigest digest = MessageDigest.getInstance("SHA-256");
+
+        try (InputStream in = Files.newInputStream(path)) {
+            byte[] buffer = new byte[8192];
+            int bytesRead;
+
+            while ((bytesRead = in.read(buffer)) != -1) {
+                digest.update(buffer, 0, bytesRead);
+            }
+        }
+
+        StringBuilder hex = new StringBuilder();
+
+        for (byte b : digest.digest()) {
+            hex.append(String.format("%02x", b & 0xff));
+        }
+
+        return hex.toString();
+    }
+
+}
