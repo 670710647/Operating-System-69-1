@@ -1,0 +1,643 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link class="component" href="/NewAcis/faces/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/basic_classes.xcss/DATB/eAHrDk!QDF0-QxoADmIDGw__" rel="stylesheet" type="text/css" /><link class="component" href="/NewAcis/faces/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/extended_classes.xcss/DATB/eAHrDk!QDF0-QxoADmIDGw__" media="rich-extended-skinning" rel="stylesheet" type="text/css" /><script src="/NewAcis/faces/a4j/g/3_3_3.Finalorg.ajax4jsf.javascript.AjaxScript" type="text/javascript"></script><script src="/NewAcis/faces/a4j/g/3_3_3.Finalorg.ajax4jsf.javascript.PrototypeScript" type="text/javascript"></script><script src="/NewAcis/faces/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/utils.js" type="text/javascript"></script><script src="/NewAcis/faces/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/browser_info.js" type="text/javascript"></script><script src="/NewAcis/faces/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/modalPanel.js" type="text/javascript"></script><script src="/NewAcis/faces/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/modalPanelBorders.js" type="text/javascript"></script><link class="component" href="/NewAcis/faces/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/modalPanel.xcss/DATB/eAHrDk!QDF0-QxoADmIDGw__" rel="stylesheet" type="text/css" /><link class="component" href="/NewAcis/faces/a4j/s/3_3_3.Finalcss/toolBar.xcss/DATB/eAHrDk!QDF0-QxoADmIDGw__" rel="stylesheet" type="text/css" /><script src="/NewAcis/faces/a4j/g/3_3_3.Finalscripts/menu.js" type="text/javascript"></script><link class="component" href="/NewAcis/faces/a4j/s/3_3_3.Finalcss/dropdownmenu.xcss/DATB/eAHrDk!QDF0-QxoADmIDGw__" rel="stylesheet" type="text/css" /><link class="component" href="/NewAcis/faces/a4j/s/3_3_3.Finalcss/menucomponents.xcss/DATB/eAHrDk!QDF0-QxoADmIDGw__" rel="stylesheet" type="text/css" /><script src="/NewAcis/faces/a4j/g/3_3_3.Finalorg/ajax4jsf/javascript/scripts/form.js" type="text/javascript"></script><script src="/NewAcis/faces/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/form.js" type="text/javascript"></script><script src="/NewAcis/faces/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/menu.js" type="text/javascript"></script><script src="/NewAcis/faces/a4j/g/3_3_3.Finalorg.ajax4jsf.javascript.ImageCacheScript" type="text/javascript"></script><script src="/NewAcis/faces/a4j/g/3_3_3.Finalscripts/tabPanel.js" type="text/javascript"></script><link class="component" href="/NewAcis/faces/a4j/s/3_3_3.Finalcss/tabPanel.xcss/DATB/eAHrDk!QDF0-QxoADmIDGw__" rel="stylesheet" type="text/css" /><link class="component" href="/NewAcis/faces/a4j/s/3_3_3.Finalcss/table.xcss/DATB/eAHrDk!QDF0-QxoADmIDGw__" rel="stylesheet" type="text/css" /><script type="text/javascript">window.RICH_FACES_EXTENDED_SKINNING_ON=true;</script><script src="/NewAcis/faces/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/skinning.js" type="text/javascript"></script><script src="/NewAcis/faces/a4j/g/3_3_3.Finaljquery.js" type="text/javascript"></script><link rel="stylesheet" type="text/css" href="/NewAcis/css/template.css" /><link rel="stylesheet" type="text/css" href="/NewAcis/css/kmuttstyle.css" /><link rel="stylesheet" type="text/css" href="/NewAcis/css/jquery-ui-1.7.2.custom.css" />
+<script language="javascript" src="/NewAcis/js/jquery-ui-1.7.2.custom.min.js"></script>
+<script language="javascript" src="/NewAcis/js/ui.datepicker.js"></script>
+<script language="javascript" src="/NewAcis/js/ui.datepicker-th.js"></script>
+<script language="javascript" src="/NewAcis/js/Util.js"></script>
+<script language="javascript" src="/NewAcis/js/jquery.qtip-1.0.0-rc3.min.js"></script>
+<script language="javascript" src="/NewAcis/js/jquery.maskedinput-1.2.2.js"></script>
+<script language="javascript" src="/NewAcis/js/jquery.maskMoney.0.2.js"></script>
+<script language="javascript" src="/NewAcis/js/jquery.maxlength.js"></script>
+<title>&#3651;&#3610;&#3626;&#3617;&#3633;&#3588;&#3619;&#3586;&#3629;&#3619;&#3633;&#3610;&#3607;&#3640;&#3609;&#3585;&#3634;&#3619;&#3624;&#3638;&#3585;&#3625;&#3634; </title>
+<script type="text/javascript">
+		   <!--
+			jQuery(document).ready(function() {
+				jQuery.noConflict();
+				jQuery.datepicker.setDefaults(jQuery.datepicker.regional["th"]);
+				/*
+				A4J.AJAX.onExpired = function(loc, expiredMsg){
+				    if(window.confirm("Custom onExpired handler "+expiredMsg+" for a location: "+loc)){
+				      return loc;
+				    } else {
+				      return false;
+				    }
+				}
+				A4J.AJAX.onError = function(req, status, message){
+				    window.alert("Custom onError handler ::"+message+" "+req+" "+status);
+				    //window.location.reload();
+				}
+				*/
+		    });
+
+		   if( /webkit/.test( navigator.userAgent.toLowerCase() ) ){
+	             var _importNode = window.document.importNode;
+	             window.document.importNode = function(node, deep){
+	                  try{
+	                       return _importNode.apply(this, arguments);
+	                  } catch(e) {
+	                       if( e.code == DOMException.NOT_SUPPORTED_ERR ){
+	                            // clone and adopt
+	                            return document.adoptNode(node.cloneNode(deep));
+	                       }
+	                       throw e;
+	                  }
+	             };
+	        }
+
+		   	function disableButton(button){
+				jQuery(button).attr('disabled',true);
+			}
+
+		   	function ShowProgram(obj){
+	   			if(obj.checked == true){
+		   		    jQuery('#divProgram').slideDown('slow');   
+		   		}else{
+		   			jQuery('#divProgram').slideUp('slow');
+			   	}
+	   		}
+		   -->
+		</script>
+<style type="text/css">
+.infoMessage {
+	color: #000000;
+}
+</style>
+		<script type="text/javascript">
+				<!--
+				if (jQuery.browser.msie) {
+					if(parseInt(jQuery.browser.version, 10) === 9){
+						location.href = '/NewAcis/help/unsupportBrowserVersion.jsp';
+					}
+				}
+		   		if(window.name != 'mainPopupWindow'){
+			   		location.href='/NewAcis/popupOpener.jsp?urlId=0';
+		   		}
+		   		-->
+			</script>
+		<script language="javascript" src="/NewAcis/js/preventHotkey.js" type="text/javascript"></script>
+<!-- <ui:include src="include/includeBrowserCloseInvalidateSession.xhtml" /> -->
+				<script language="javascript" src="/NewAcis/js/InputFilter.js"></script>
+				<script language="javascript" src="/NewAcis/js/registrationUtils.js"></script>
+				<style type="text/css">
+					.col1 { text-align: right; }
+					.col2 { text-align: left; }
+					.top { vertical-align: top; }
+					.bottom { vertical-align: bottom; }
+					
+					.tap2-1-col1 { text-align: right; width: 150px;}
+					.tap2-1-col2 { text-align: left; width: 250px;}
+					
+					.tap3-1-col3 { text-align: right; width: 15%;}
+					.tap3-1-col4 { text-align: left; width: 85%;}
+					
+					.tap3-1-col1 { text-align: right; width: 30%;}
+					.tap3-1-col2 { text-align: left; width: 70%;}
+				</style>
+</head>
+<body><div><div id="studentTimeLeftModal" style="display: none;"><input autocomplete="off" id="studentTimeLeftModalOpenedState" name="studentTimeLeftModalOpenedState" type="hidden" /><div class="rich-modalpanel noMaskClass2" id="studentTimeLeftModalContainer" style="position: absolute; display: none; z-index: 100; background-color: inherit;"><div class="rich-mpnl-mask-div-opaque rich-mpnl-mask-div" id="studentTimeLeftModalDiv" style="z-index: -1;"><button class="rich-mpnl-button" id="studentTimeLeftModalFirstHref"></button></div><div class="rich-mpnl-panel"><div class="rich-mp-container" id="studentTimeLeftModalCDiv" style="position: absolute; left: 0px; top: 0px; z-index: 9;"><div class="rich-mpnl-shadow" id="studentTimeLeftModalShadowDiv" style="top: 0px; left: 0px;"></div><div class=" rich-mpnl-content" id="studentTimeLeftModalContentDiv"><table border="0" cellpadding="0" cellspacing="0" class="rich-mp-content-table" id="studentTimeLeftModalContentTable" style="width: 1px;height: 1px;"><tr style="height: 1%;"><td class="rich-mpnl-header-cell"><div class="rich-mpnl-text rich-mpnl-header " id="studentTimeLeftModalHeader" style="white-space: nowrap;">&#3648;&#3623;&#3621;&#3634;&#3651;&#3594;&#3657;&#3591;&#3634;&#3609;&#3648;&#3627;&#3621;&#3639;&#3629;</div></td></tr><tr style="height: 99%"><td class="rich-mpnl-body" valign="top"><div id="studentTimeLeftPanel"><span id="studentTimeLeft" style="font-size:26px;font-weight:bold;text-align:center;font-family:'Times New Roman';display:block">--:--</span><span id="desc">&#3649;&#3605;&#3656;&#3606;&#3657;&#3634;&#3652;&#3617;&#3656;&#3651;&#3594;&#3657;&#3591;&#3634;&#3609;&#3609;&#3634;&#3609;  15 &#3609;&#3634;&#3607;&#3637;&#3619;&#3632;&#3610;&#3610;&#3592;&#3632;&#3605;&#3633;&#3604;&#3585;&#3634;&#3619;&#3648;&#3594;&#3639;&#3656;&#3629;&#3617;&#3605;&#3656;&#3629;</span></div><span id="studentTimeLeftInMillisec" style="display:none;">415314</span></td></tr></table></div></div></div><div class="rich-mpnl-mask-div rich-mpnl-mask-div-transparent" id="studentTimeLeftModalCursorDiv" style="z-index: -200;"><button class="rich-mpnl-button" id="studentTimeLeftModalLastHref"></button></div><script type="text/javascript">new ModalPanel('studentTimeLeftModal',
+				{
+					width: -1,
+					height: -1,
+
+					minWidth: -1,
+					minHeight: -1,
+
+					resizeable: false,
+					moveable: true,
+
+					left: "0px",
+					top: "77px",
+
+					zindex: 100,onresize: '',onmove: '',onshow: '',onhide: '',onbeforeshow: '',onbeforehide: '',
+					domElementAttachment: "",				
+					keepVisualState: false,
+					showWhenRendered: false,
+					selectBehavior: "disable",
+
+					autosized: true,
+					overlapEmbedObjects: false});</script></div><script type="text/javascript"></script></div>
+			<script type="text/javascript">
+			jQuery(document).ready(function() {
+				Richfaces.showModalPanel('studentTimeLeftModal');
+				while(true){
+					if(jQuery('.noMaskClass2 .rich-mpnl-mask-div').css('z-index') != -200){
+						break;
+					}
+				}
+				jQuery('.noMaskClass2 .rich-mpnl-mask-div').css('width',0);
+				jQuery('.noMaskClass2 .rich-mpnl-mask-div').css('height',0);
+				var timeLeftInMillisec;
+				var myTimer;
+				function refreshStudentTimeLeft(){
+		            if (timeLeftInMillisec <= 0) {
+		            	clearInterval(myTimer);
+		            	//jQuery("#studentTimeLeftModalContentTable").css("background-color","#000000");
+		            	jQuery('#studentTimeLeft').css("color","red");
+		            	jQuery('#studentTimeLeft').html("00:00");
+		            	return;
+		            } else {
+		                var left, days, hours, minutes, seconds, timeLeftStr = '';
+		                left = timeLeftInMillisec;
+		                days = parseInt(left / (1000 * 60 * 60 * 24));
+		                left = left - (days * 1000 * 60 * 60 * 24);
+		                hours = parseInt(left / (1000 * 60 * 60));
+		                left = left - (hours * 1000 * 60 * 60);
+		                minutes = parseInt(left / (1000 * 60));
+		                left = left - (minutes * 1000 * 60);
+		                seconds = parseInt(left / 1000);
+		                if (0 != days) {
+		                	timeLeftStr = timeLeftStr + days;
+		                	timeLeftStr = timeLeftStr +"D ";
+		                	if (hours < 10) {
+			                	timeLeftStr = timeLeftStr +"0";
+			                }
+			                timeLeftStr = timeLeftStr + hours;
+			                timeLeftStr = timeLeftStr + ":";
+		                }else if (hours != 0) {
+			                if (hours < 10) {
+			                	timeLeftStr = timeLeftStr +"0";
+			                }
+			                timeLeftStr = timeLeftStr + hours;
+			                timeLeftStr = timeLeftStr + ":";
+		                }
+		                if (minutes < 10) {
+		                	timeLeftStr = timeLeftStr + "0";
+		                }
+		                timeLeftStr = timeLeftStr + minutes;
+		                timeLeftStr = timeLeftStr + ":";
+		                if (seconds < 10) {
+		                	timeLeftStr = timeLeftStr + "0";
+		                }
+		                timeLeftStr = timeLeftStr + seconds;
+		                if(days == 0 && hours == 0 && minutes == 0 && seconds < 10){
+		                	jQuery('#studentTimeLeft').css("color","#FF7F00");
+		                }
+		                if(days == 0 && hours == 0 && minutes == 0 && seconds==0){
+		                	//jQuery("#studentTimeLeftModalContentTable").css("background-color","#000000");
+		                	jQuery('#studentTimeLeft').css("color","red");
+		                }
+		                jQuery('#studentTimeLeft').html(timeLeftStr);
+		            }
+				}
+				timeLeftInMillisec = parseInt(jQuery('#studentTimeLeftInMillisec').html(),10);
+				refreshStudentTimeLeft();
+				myTimer = setInterval(function(){timeLeftInMillisec = timeLeftInMillisec - 1000;refreshStudentTimeLeft();},1000);
+			});	
+	</script></div>
+	<div id="divHeader"><img src="/NewAcis/images/kmutt-academic_01.gif" alt="" height="76" width="1045" /><img src="/NewAcis/images/kmutt-academic_02.gif" alt="" width="1045" /><img src="/NewAcis/images/kmutt-academic_03.gif" alt="" width="1045" />
+	</div>
+	<div>
+		<div id="divMenu">
+<form id="j_id21" name="j_id21" method="post" action="/NewAcis/secured/studentAffair/scholarship/scholarshipApplicationPage2.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id21" value="j_id21" />
+<table border="0" cellpadding="0" cellspacing="0" class="rich-toolbar " height="30" id="j_id21:j_id22" width="100%"><tr valign="middle"><td class="rich-toolbar-item "><div class="rich-ddmenu-label rich-ddmenu-label-unselect  " id="j_id21:j_id48"><div class="rich-label-text-decor" id="j_id21:j_id48_span">&#3591;&#3634;&#3609;&#3619;&#3633;&#3610;&#3648;&#3586;&#3657;&#3634;</div><div style="margin: 0px; padding: 0px; border: 0px; position: absolute; z-index: 100;"><div id="j_id21:j_id48_menu" class="rich-menu-list-border" style="display: none; z-index: 2;"><div class="rich-menu-list-bg"><div class="rich-menu-group rich-menu-group-enabled" id="j_id21:j_id49" onmouseout="RichFaces.Menu.groupMouseOut(event, this, '', '');" onmouseover="RichFaces.Menu.groupMouseOver(event, this, '', '');"><span class="rich-menu-item-icon-enabled rich-menu-group-icon " id="j_id21:j_id49:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/images/spacer.gif" width="16" /></span><span class="rich-menu-item-label rich-menu-group-label" id="j_id21:j_id49:anchor">&#3592;&#3633;&#3604;&#3585;&#3634;&#3619;&#3586;&#3657;&#3629;&#3617;&#3641;&#3621;&#3611;&#3619;&#3632;&#3623;&#3633;&#3605;&#3636;&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634;</span><div class="rich-menu-node rich-menu-node-icon rich-menu-item-folder rich-menu-group-folder" id="j_id21:j_id49:folder">&#160;</div></div><div class="rich-menu-list-strut"><div class="rich-menu-list-strut" style="">&#160;</div></div></div></div><script id="j_id21:j_id48_menu_script" type="text/javascript">new RichFaces.Menu.Layer('j_id21:j_id48_menu',{'hideDelay':800,'delay':50} ).asDropDown('j_id21:j_id48',{'direction':'bottom\x2Dright'} ).addItems([['j_id21:j_id49',{'closeOnClick':false,'flagGroup':1} ] ] );</script><div id="j_id21:j_id49_menu" class="rich-menu-list-border" style="display: none; z-index: 2;"><div class="rich-menu-list-bg"><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id50" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id50:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id50:anchor">&#3629;&#3633;&#3614;&#3648;&#3604;&#3605;&#3586;&#3657;&#3629;&#3617;&#3641;&#3621;&#3585;&#3634;&#3619;&#3605;&#3636;&#3604;&#3605;&#3656;&#3629;</span></div><div class="rich-menu-list-strut"><div class="rich-menu-list-strut" style="">&#160;</div></div></div></div><script id="j_id21:j_id49_menu_script" type="text/javascript">new RichFaces.Menu.Layer('j_id21:j_id49_menu').asSubMenu('j_id21:j_id48_menu','j_id21:j_id49').addItems([['j_id21:j_id50'] ] );</script></div></div></td><td align="center"><img src="/NewAcis/faces/a4j/g/3_3_3.Finalorg.richfaces.renderkit.html.images.LineSeparatorImage/DATB/eAFjDlkuvf7f!!!!GRgYJAAsfAXc" alt="" /></td><td class="rich-toolbar-item "><div class="rich-ddmenu-label rich-ddmenu-label-unselect  " id="j_id21:j_id51"><div class="rich-label-text-decor" id="j_id21:j_id51_span">&#3586;&#3657;&#3629;&#3617;&#3641;&#3621;&#3611;&#3619;&#3632;&#3623;&#3633;&#3605;&#3636;&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634;</div><div style="margin: 0px; padding: 0px; border: 0px; position: absolute; z-index: 100;"><div id="j_id21:j_id51_menu" class="rich-menu-list-border" style="display: none; z-index: 2;"><div class="rich-menu-list-bg"><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id52" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id52:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id52:anchor">&#3610;&#3633;&#3609;&#3607;&#3638;&#3585;&#3611;&#3619;&#3632;&#3623;&#3633;&#3605;&#3636;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id53" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id53:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id53:anchor">&#3626;&#3629;&#3610;&#3606;&#3634;&#3617;&#3586;&#3657;&#3629;&#3617;&#3641;&#3621;&#3629;&#3634;&#3592;&#3634;&#3619;&#3618;&#3660;&#3607;&#3637;&#3656;&#3611;&#3619;&#3638;&#3585;&#3625;&#3634;&#3649;&#3621;&#3632;&#3607;&#3637;&#3656;&#3611;&#3619;&#3638;&#3585;&#3625;&#3634;&#3619;&#3656;&#3623;&#3617;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id54" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id54:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id54:anchor">&#3626;&#3629;&#3610;&#3606;&#3634;&#3617;&#3623;&#3636;&#3594;&#3634;&#3611;&#3619;&#3633;&#3610;&#3614;&#3639;&#3657;&#3609;&#3600;&#3634;&#3609;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id55" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id55:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id55:anchor">&#3614;&#3636;&#3617;&#3614;&#3660;&#3611;&#3619;&#3632;&#3623;&#3633;&#3605;&#3636;&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634;&#3649;&#3621;&#3632;&#3651;&#3610;&#3619;&#3634;&#3618;&#3623;&#3636;&#3594;&#3634;&#3607;&#3637;&#3656;&#3621;&#3591;&#3607;&#3632;&#3648;&#3610;&#3637;&#3618;&#3609;</span></div><div class="rich-menu-list-strut"><div class="rich-menu-list-strut" style="">&#160;</div></div></div></div><script id="j_id21:j_id51_menu_script" type="text/javascript">new RichFaces.Menu.Layer('j_id21:j_id51_menu',{'hideDelay':800,'delay':50} ).asDropDown('j_id21:j_id51',{'direction':'bottom\x2Dright'} ).addItems([['j_id21:j_id52'] ,['j_id21:j_id53'] ,['j_id21:j_id54'] ,['j_id21:j_id55'] ] );</script></div></div></td><td align="center"><img src="/NewAcis/faces/a4j/g/3_3_3.Finalorg.richfaces.renderkit.html.images.LineSeparatorImage/DATB/eAFjDlkuvf7f!!!!GRgYJAAsfAXc" alt="" /></td><td class="rich-toolbar-item "><div class="rich-ddmenu-label rich-ddmenu-label-unselect  " id="j_id21:j_id56"><div class="rich-label-text-decor" id="j_id21:j_id56_span">&#3621;&#3591;&#3607;&#3632;&#3648;&#3610;&#3637;&#3618;&#3609;&#3619;&#3634;&#3618;&#3623;&#3636;&#3594;&#3634;</div><div style="margin: 0px; padding: 0px; border: 0px; position: absolute; z-index: 100;"><div id="j_id21:j_id56_menu" class="rich-menu-list-border" style="display: none; z-index: 2;"><div class="rich-menu-list-bg"><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id57" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id57:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id57:anchor">&#3621;&#3591;&#3607;&#3632;&#3648;&#3610;&#3637;&#3618;&#3609;&#3648;&#3619;&#3637;&#3618;&#3609;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id58" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id58:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id58:anchor">&#3621;&#3591;&#3607;&#3632;&#3648;&#3610;&#3637;&#3618;&#3609;&#3648;&#3619;&#3637;&#3618;&#3609;&#3621;&#3656;&#3634;&#3594;&#3657;&#3634;/&#3648;&#3614;&#3636;&#3656;&#3617;/&#3621;&#3604;/&#3648;&#3611;&#3621;&#3637;&#3656;&#3618;&#3609;&#3585;&#3621;&#3640;&#3656;&#3617;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id59" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id59:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id59:anchor">&#3621;&#3604;&#3619;&#3634;&#3618;&#3623;&#3636;&#3594;&#3634;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id60" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id60:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id60:anchor">&#3594;&#3635;&#3619;&#3632;&#3648;&#3591;&#3636;&#3609;&#3588;&#3656;&#3634;&#3621;&#3591;&#3607;&#3632;&#3648;&#3610;&#3637;&#3618;&#3609;/&#3588;&#3656;&#3634;&#3621;&#3634;&#3614;&#3633;&#3585;(&#3619;&#3633;&#3585;&#3625;&#3634;&#3626;&#3606;&#3634;&#3609;&#3616;&#3634;&#3614;) &#3649;&#3621;&#3632;&#3629;&#3639;&#3656;&#3609;&#3654; (432306)</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id61" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id61:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id61:anchor">&#3626;&#3629;&#3610;&#3606;&#3634;&#3617;/&#3614;&#3636;&#3617;&#3614;&#3660;&#3619;&#3634;&#3618;&#3623;&#3636;&#3594;&#3634;&#3607;&#3637;&#3656;&#3621;&#3591;&#3607;&#3632;&#3648;&#3610;&#3637;&#3618;&#3609;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id62" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id62:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id62:anchor">&#3592;&#3635;&#3609;&#3623;&#3609;&#3607;&#3637;&#3656;&#3623;&#3656;&#3634;&#3591;&#3651;&#3609;&#3649;&#3605;&#3656;&#3621;&#3632;&#3585;&#3621;&#3640;&#3656;&#3617;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id63" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id63:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id63:anchor">&#3610;&#3633;&#3609;&#3607;&#3638;&#3585;&#3648;&#3621;&#3586;&#3607;&#3637;&#3656;&#3610;&#3633;&#3597;&#3594;&#3637;&#3608;&#3609;&#3634;&#3588;&#3634;&#3619;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id64" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id64:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id64:anchor">&#3626;&#3629;&#3610;&#3606;&#3634;&#3617;&#3648;&#3621;&#3586;&#3607;&#3637;&#3656;&#3651;&#3610;&#3649;&#3592;&#3657;&#3591;&#3627;&#3609;&#3637;&#3657;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id65" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id65:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id65:anchor">&#3626;&#3629;&#3610;&#3606;&#3634;&#3617;&#3585;&#3634;&#3619;&#3588;&#3639;&#3609;&#3648;&#3591;&#3636;&#3609;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id66" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id66:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id66:anchor">&#3614;&#3636;&#3617;&#3614;&#3660;&#3651;&#3610;&#3648;&#3626;&#3619;&#3655;&#3592;&#3619;&#3633;&#3610;&#3648;&#3591;&#3636;&#3609;</span></div><div class="rich-menu-list-strut"><div class="rich-menu-list-strut" style="">&#160;</div></div></div></div><script id="j_id21:j_id56_menu_script" type="text/javascript">new RichFaces.Menu.Layer('j_id21:j_id56_menu',{'hideDelay':800,'delay':50} ).asDropDown('j_id21:j_id56',{'direction':'bottom\x2Dright'} ).addItems([['j_id21:j_id57'] ,['j_id21:j_id58'] ,['j_id21:j_id59'] ,['j_id21:j_id60'] ,['j_id21:j_id61'] ,['j_id21:j_id62'] ,['j_id21:j_id63'] ,['j_id21:j_id64'] ,['j_id21:j_id65'] ,['j_id21:j_id66'] ] );</script></div></div></td><td align="center"><img src="/NewAcis/faces/a4j/g/3_3_3.Finalorg.richfaces.renderkit.html.images.LineSeparatorImage/DATB/eAFjDlkuvf7f!!!!GRgYJAAsfAXc" alt="" /></td><td class="rich-toolbar-item "><div class="rich-ddmenu-label rich-ddmenu-label-unselect  " id="j_id21:j_id67"><div class="rich-label-text-decor" id="j_id21:j_id67_span">&#3623;&#3636;&#3607;&#3618;&#3634;&#3609;&#3636;&#3614;&#3609;&#3608;&#3660;</div><div style="margin: 0px; padding: 0px; border: 0px; position: absolute; z-index: 100;"><div id="j_id21:j_id67_menu" class="rich-menu-list-border" style="display: none; z-index: 2;"><div class="rich-menu-list-bg"><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id68" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id68:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id68:anchor">&#3610;&#3633;&#3609;&#3607;&#3638;&#3585;&#3648;&#3612;&#3618;&#3649;&#3614;&#3619;&#3656;&#3623;&#3636;&#3607;&#3618;&#3634;&#3609;&#3636;&#3614;&#3609;&#3608;&#3660;(482003-S)</span></div><div class="rich-menu-list-strut"><div class="rich-menu-list-strut" style="">&#160;</div></div></div></div><script id="j_id21:j_id67_menu_script" type="text/javascript">new RichFaces.Menu.Layer('j_id21:j_id67_menu',{'hideDelay':800,'delay':50} ).asDropDown('j_id21:j_id67',{'direction':'bottom\x2Dright'} ).addItems([['j_id21:j_id68'] ] );</script></div></div></td><td align="center"><img src="/NewAcis/faces/a4j/g/3_3_3.Finalorg.richfaces.renderkit.html.images.LineSeparatorImage/DATB/eAFjDlkuvf7f!!!!GRgYJAAsfAXc" alt="" /></td><td class="rich-toolbar-item "><div class="rich-ddmenu-label rich-ddmenu-label-unselect  " id="j_id21:j_id69"><div class="rich-label-text-decor" id="j_id21:j_id69_span">&#3605;&#3634;&#3619;&#3634;&#3591;&#3626;&#3629;&#3609;/&#3605;&#3634;&#3619;&#3634;&#3591;&#3626;&#3629;&#3610;</div><div style="margin: 0px; padding: 0px; border: 0px; position: absolute; z-index: 100;"><div id="j_id21:j_id69_menu" class="rich-menu-list-border" style="display: none; z-index: 2;"><div class="rich-menu-list-bg"><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id70" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id70:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id70:anchor">&#3626;&#3629;&#3610;&#3606;&#3634;&#3617;&#3605;&#3634;&#3619;&#3634;&#3591;&#3626;&#3629;&#3610;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id71" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id71:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id71:anchor">&#3605;&#3634;&#3619;&#3634;&#3591;&#3648;&#3619;&#3637;&#3618;&#3609;&#3605;&#3634;&#3617;&#3594;&#3633;&#3657;&#3609;&#3611;&#3637;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id72" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id72:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id72:anchor">&#3605;&#3634;&#3619;&#3634;&#3591;&#3648;&#3619;&#3637;&#3618;&#3609;&#3605;&#3634;&#3617;&#3616;&#3634;&#3588;&#3623;&#3636;&#3594;&#3634;</span></div><div class="rich-menu-list-strut"><div class="rich-menu-list-strut" style="">&#160;</div></div></div></div><script id="j_id21:j_id69_menu_script" type="text/javascript">new RichFaces.Menu.Layer('j_id21:j_id69_menu',{'hideDelay':800,'delay':50} ).asDropDown('j_id21:j_id69',{'direction':'bottom\x2Dright'} ).addItems([['j_id21:j_id70'] ,['j_id21:j_id71'] ,['j_id21:j_id72'] ] );</script></div></div></td><td align="center"><img src="/NewAcis/faces/a4j/g/3_3_3.Finalorg.richfaces.renderkit.html.images.LineSeparatorImage/DATB/eAFjDlkuvf7f!!!!GRgYJAAsfAXc" alt="" /></td><td class="rich-toolbar-item "><div class="rich-ddmenu-label rich-ddmenu-label-unselect  " id="j_id21:j_id73"><div class="rich-label-text-decor" id="j_id21:j_id73_span">&#3588;&#3635;&#3619;&#3657;&#3629;&#3591;&#3612;&#3656;&#3634;&#3609;&#3648;&#3623;&#3655;&#3610;</div><div style="margin: 0px; padding: 0px; border: 0px; position: absolute; z-index: 100;"><div id="j_id21:j_id73_menu" class="rich-menu-list-border" style="display: none; z-index: 2;"><div class="rich-menu-list-bg"><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id74" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id74:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id74:anchor">&#3605;&#3636;&#3604;&#3605;&#3634;&#3617;&#3588;&#3635;&#3619;&#3657;&#3629;&#3591;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id75" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id75:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id75:anchor">&#3588;&#3635;&#3619;&#3657;&#3629;&#3591;&#3586;&#3629;&#3648;&#3629;&#3585;&#3626;&#3634;&#3619;&#3626;&#3635;&#3588;&#3633;&#3597;&#3607;&#3634;&#3591;&#3585;&#3634;&#3619;&#3624;&#3638;&#3585;&#3625;&#3634;</span></div><div class="rich-menu-group rich-menu-group-enabled" id="j_id21:j_id76" onmouseout="RichFaces.Menu.groupMouseOut(event, this, '', '');" onmouseover="RichFaces.Menu.groupMouseOver(event, this, '', '');"><span class="rich-menu-item-icon-enabled rich-menu-group-icon " id="j_id21:j_id76:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/images/spacer.gif" width="16" /></span><span class="rich-menu-item-label rich-menu-group-label" id="j_id21:j_id76:anchor">&#3618;&#3639;&#3656;&#3609;&#3588;&#3635;&#3619;&#3657;&#3629;&#3591;&#3585;&#3634;&#3619;&#3621;&#3634;&#3605;&#3656;&#3634;&#3591;&#3654;</span><div class="rich-menu-node rich-menu-node-icon rich-menu-item-folder rich-menu-group-folder" id="j_id21:j_id76:folder">&#160;</div></div><div class="rich-menu-group rich-menu-group-enabled" id="j_id21:j_id77" onmouseout="RichFaces.Menu.groupMouseOut(event, this, '', '');" onmouseover="RichFaces.Menu.groupMouseOver(event, this, '', '');"><span class="rich-menu-item-icon-enabled rich-menu-group-icon " id="j_id21:j_id77:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/images/spacer.gif" width="16" /></span><span class="rich-menu-item-label rich-menu-group-label" id="j_id21:j_id77:anchor">&#3618;&#3639;&#3656;&#3609;&#3588;&#3635;&#3619;&#3657;&#3629;&#3591;&#3648;&#3585;&#3637;&#3656;&#3618;&#3623;&#3585;&#3633;&#3610;&#3585;&#3634;&#3619;&#3621;&#3591;&#3607;&#3632;&#3648;&#3610;&#3637;&#3618;&#3609;</span><div class="rich-menu-node rich-menu-node-icon rich-menu-item-folder rich-menu-group-folder" id="j_id21:j_id77:folder">&#160;</div></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id78" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id78:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id78:anchor">&#3649;&#3592;&#3657;&#3591;&#3588;&#3623;&#3634;&#3617;&#3592;&#3635;&#3609;&#3591;&#3586;&#3629;&#3626;&#3635;&#3648;&#3619;&#3655;&#3592;&#3585;&#3634;&#3619;&#3624;&#3638;&#3585;&#3625;&#3634;</span></div><div class="rich-menu-list-strut"><div class="rich-menu-list-strut" style="">&#160;</div></div></div></div><script id="j_id21:j_id73_menu_script" type="text/javascript">new RichFaces.Menu.Layer('j_id21:j_id73_menu',{'hideDelay':800,'delay':50} ).asDropDown('j_id21:j_id73',{'direction':'bottom\x2Dright'} ).addItems([['j_id21:j_id74'] ,['j_id21:j_id75'] ,['j_id21:j_id76',{'closeOnClick':false,'flagGroup':1} ] ,['j_id21:j_id77',{'closeOnClick':false,'flagGroup':1} ] ,['j_id21:j_id78'] ] );</script><div id="j_id21:j_id76_menu" class="rich-menu-list-border" style="display: none; z-index: 2;"><div class="rich-menu-list-bg"><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id79" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id79:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id79:anchor">&#3651;&#3610;&#3588;&#3635;&#3619;&#3657;&#3629;&#3591;&#3586;&#3629;&#3621;&#3634;&#3614;&#3633;&#3585;&#3585;&#3634;&#3619;&#3624;&#3638;&#3585;&#3625;&#3634;</span></div><div class="rich-menu-list-strut"><div class="rich-menu-list-strut" style="">&#160;</div></div></div></div><script id="j_id21:j_id76_menu_script" type="text/javascript">new RichFaces.Menu.Layer('j_id21:j_id76_menu').asSubMenu('j_id21:j_id73_menu','j_id21:j_id76').addItems([['j_id21:j_id79'] ] );</script><div id="j_id21:j_id77_menu" class="rich-menu-list-border" style="display: none; z-index: 2;"><div class="rich-menu-list-bg"><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id80" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id80:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id80:anchor">&#3588;&#3635;&#3619;&#3657;&#3629;&#3591;&#3586;&#3629;&#3648;&#3611;&#3621;&#3637;&#3656;&#3618;&#3609;&#3648;&#3591;&#3639;&#3656;&#3629;&#3609;&#3652;&#3586;&#3585;&#3634;&#3619;&#3621;&#3591;&#3607;&#3632;&#3648;&#3610;&#3637;&#3618;&#3609; (Audit, S/U)</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id81" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id81:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id81:anchor">&#3588;&#3635;&#3619;&#3657;&#3629;&#3591;&#3586;&#3629;&#3626;&#3629;&#3610;&#3623;&#3636;&#3607;&#3618;&#3634;&#3609;&#3636;&#3614;&#3609;&#3608;&#3660;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id82" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id82:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id82:anchor">&#3588;&#3635;&#3619;&#3657;&#3629;&#3591;&#3586;&#3629;&#3621;&#3591;&#3607;&#3632;&#3648;&#3610;&#3637;&#3618;&#3609; 9-11 &#3627;&#3609;&#3656;&#3623;&#3618;&#3585;&#3636;&#3605;&#3627;&#3619;&#3639;&#3629; 20-22 &#3627;&#3609;&#3656;&#3623;&#3618;&#3585;&#3636;&#3605;(&#3626;&#3635;&#3627;&#3619;&#3633;&#3610;&#3611;&#3619;&#3636;&#3597;&#3597;&#3634;&#3605;&#3619;&#3637;)</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id83" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id83:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id83:anchor">&#3588;&#3635;&#3619;&#3657;&#3629;&#3591;&#3586;&#3629;&#3606;&#3629;&#3609;&#3619;&#3634;&#3618;&#3623;&#3636;&#3594;&#3634;</span></div><div class="rich-menu-list-strut"><div class="rich-menu-list-strut" style="">&#160;</div></div></div></div><script id="j_id21:j_id77_menu_script" type="text/javascript">new RichFaces.Menu.Layer('j_id21:j_id77_menu').asSubMenu('j_id21:j_id73_menu','j_id21:j_id77').addItems([['j_id21:j_id80'] ,['j_id21:j_id81'] ,['j_id21:j_id82'] ,['j_id21:j_id83'] ] );</script></div></div></td><td align="center"><img src="/NewAcis/faces/a4j/g/3_3_3.Finalorg.richfaces.renderkit.html.images.LineSeparatorImage/DATB/eAFjDlkuvf7f!!!!GRgYJAAsfAXc" alt="" /></td><td class="rich-toolbar-item "><div class="rich-ddmenu-label rich-ddmenu-label-unselect  " id="j_id21:j_id84"><div class="rich-label-text-decor" id="j_id21:j_id84_span">&#3612;&#3621;&#3585;&#3634;&#3619;&#3648;&#3619;&#3637;&#3618;&#3609;</div><div style="margin: 0px; padding: 0px; border: 0px; position: absolute; z-index: 100;"><div id="j_id21:j_id84_menu" class="rich-menu-list-border" style="display: none; z-index: 2;"><div class="rich-menu-list-bg"><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id85" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id85:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id85:anchor">&#3626;&#3629;&#3610;&#3606;&#3634;&#3617;&#3612;&#3621;&#3585;&#3634;&#3619;&#3648;&#3619;&#3637;&#3618;&#3609;(&#3626;&#3635;&#3627;&#3619;&#3633;&#3610;&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634;)</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id86" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id86:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id86:anchor">Simulate &#3605;&#3619;&#3623;&#3592;&#3626;&#3629;&#3610;&#3619;&#3634;&#3618;&#3623;&#3636;&#3594;&#3634;&#3588;&#3591;&#3588;&#3657;&#3634;&#3591;&#3605;&#3634;&#3617;&#3650;&#3588;&#3619;&#3591;&#3626;&#3619;&#3657;&#3634;&#3591;&#3627;&#3621;&#3633;&#3585;&#3626;&#3641;&#3605;&#3619;(&#3626;&#3635;&#3627;&#3619;&#3633;&#3610;&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634;)</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id87" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id87:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id87:anchor">&#3607;&#3604;&#3621;&#3629;&#3591;&#3588;&#3635;&#3609;&#3623;&#3603;&#3612;&#3621;&#3585;&#3634;&#3619;&#3648;&#3619;&#3637;&#3618;&#3609;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id88" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id88:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id88:anchor">&#3605;&#3619;&#3623;&#3592;&#3626;&#3629;&#3610;&#3623;&#3636;&#3594;&#3634;&#3648;&#3619;&#3637;&#3618;&#3609;&#3605;&#3634;&#3617;&#3650;&#3588;&#3619;&#3591;&#3626;&#3619;&#3657;&#3634;&#3591;&#3627;&#3621;&#3633;&#3585;&#3626;&#3641;&#3605;&#3619;(&#3626;&#3635;&#3627;&#3619;&#3633;&#3610;&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634;)</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id89" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id89:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id89:anchor">&#3619;&#3634;&#3618;&#3591;&#3634;&#3609;&#3605;&#3619;&#3623;&#3592;&#3626;&#3629;&#3610;&#3623;&#3636;&#3594;&#3634;&#3648;&#3619;&#3637;&#3618;&#3609;&#3605;&#3634;&#3617;&#3650;&#3588;&#3619;&#3591;&#3626;&#3619;&#3657;&#3634;&#3591;&#3627;&#3621;&#3633;&#3585;&#3626;&#3641;&#3605;&#3619; (&#3649;&#3626;&#3604;&#3591;&#3648;&#3593;&#3614;&#3634;&#3632;&#3623;&#3636;&#3594;&#3634;&#3607;&#3637;&#3656;&#3652;&#3617;&#3656;&#3612;&#3656;&#3634;&#3609;)</span></div><div class="rich-menu-list-strut"><div class="rich-menu-list-strut" style="">&#160;</div></div></div></div><script id="j_id21:j_id84_menu_script" type="text/javascript">new RichFaces.Menu.Layer('j_id21:j_id84_menu',{'hideDelay':800,'delay':50} ).asDropDown('j_id21:j_id84',{'direction':'bottom\x2Dright'} ).addItems([['j_id21:j_id85'] ,['j_id21:j_id86'] ,['j_id21:j_id87'] ,['j_id21:j_id88'] ,['j_id21:j_id89'] ] );</script></div></div></td><td align="center"><img src="/NewAcis/faces/a4j/g/3_3_3.Finalorg.richfaces.renderkit.html.images.LineSeparatorImage/DATB/eAFjDlkuvf7f!!!!GRgYJAAsfAXc" alt="" /></td><td class="rich-toolbar-item "><div class="rich-ddmenu-label rich-ddmenu-label-unselect  " id="j_id21:j_id90"><div class="rich-label-text-decor" id="j_id21:j_id90_span">&#3611;&#3621;&#3629;&#3604;&#3616;&#3634;&#3619;&#3632;</div><div style="margin: 0px; padding: 0px; border: 0px; position: absolute; z-index: 100;"><div id="j_id21:j_id90_menu" class="rich-menu-list-border" style="display: none; z-index: 2;"><div class="rich-menu-list-bg"><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id91" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id91:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id91:anchor">&#3605;&#3619;&#3623;&#3592;&#3626;&#3629;&#3610;&#3616;&#3634;&#3619;&#3632;</span></div><div class="rich-menu-list-strut"><div class="rich-menu-list-strut" style="">&#160;</div></div></div></div><script id="j_id21:j_id90_menu_script" type="text/javascript">new RichFaces.Menu.Layer('j_id21:j_id90_menu',{'hideDelay':800,'delay':50} ).asDropDown('j_id21:j_id90',{'direction':'bottom\x2Dright'} ).addItems([['j_id21:j_id91'] ] );</script></div></div></td><td align="center"><img src="/NewAcis/faces/a4j/g/3_3_3.Finalorg.richfaces.renderkit.html.images.LineSeparatorImage/DATB/eAFjDlkuvf7f!!!!GRgYJAAsfAXc" alt="" /></td><td class="rich-toolbar-item "><div class="rich-ddmenu-label rich-ddmenu-label-unselect  " id="j_id21:j_id92"><div class="rich-label-text-decor" id="j_id21:j_id92_span">&#3613;&#3638;&#3585;&#3591;&#3634;&#3609;</div><div style="margin: 0px; padding: 0px; border: 0px; position: absolute; z-index: 100;"><div id="j_id21:j_id92_menu" class="rich-menu-list-border" style="display: none; z-index: 2;"><div class="rich-menu-list-bg"><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id93" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id93:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id93:anchor">&#3626;&#3629;&#3610;&#3606;&#3634;&#3617;&#3619;&#3634;&#3618;&#3594;&#3639;&#3656;&#3629;&#3626;&#3606;&#3634;&#3609;&#3607;&#3637;&#3656;&#3613;&#3638;&#3585;&#3591;&#3634;&#3609;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id94" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id94:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id94:anchor">&#3648;&#3629;&#3585;&#3626;&#3634;&#3619; Download</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id95" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id95:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id95:anchor">&#3586;&#3629;&#3648;&#3614;&#3636;&#3656;&#3617;&#3619;&#3634;&#3618;&#3594;&#3639;&#3656;&#3629;&#3626;&#3606;&#3634;&#3609;&#3607;&#3637;&#3656;&#3613;&#3638;&#3585;&#3591;&#3634;&#3609;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id96" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id96:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id96:anchor">&#3588;&#3635;&#3619;&#3657;&#3629;&#3591;&#3613;&#3638;&#3585;&#3591;&#3634;&#3609;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id97" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id97:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id97:anchor">&#3626;&#3629;&#3610;&#3606;&#3634;&#3617;&#3612;&#3621;&#3585;&#3634;&#3619;&#3605;&#3629;&#3610;&#3619;&#3633;&#3610;&#3627;&#3619;&#3639;&#3629;&#3611;&#3599;&#3636;&#3648;&#3626;&#3608;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id98" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id98:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id98:anchor">&#3614;&#3636;&#3617;&#3614;&#3660;&#3649;&#3610;&#3610;&#3611;&#3619;&#3632;&#3648;&#3617;&#3636;&#3609;&#3612;&#3621;&#3585;&#3634;&#3619;&#3613;&#3638;&#3585;&#3627;&#3633;&#3604;&#3611;&#3599;&#3636;&#3610;&#3633;&#3605;&#3636;&#3591;&#3634;&#3609;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id99" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id99:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id99:anchor">&#3610;&#3633;&#3609;&#3607;&#3638;&#3585;&#3649;&#3610;&#3610;&#3649;&#3626;&#3604;&#3591;&#3588;&#3623;&#3634;&#3617;&#3588;&#3636;&#3604;&#3648;&#3627;&#3655;&#3609;&#3605;&#3656;&#3629;&#3610;&#3619;&#3636;&#3625;&#3633;&#3607;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id100" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id100:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id100:anchor">&#3588;&#3635;&#3619;&#3657;&#3629;&#3591;&#3586;&#3629;&#3627;&#3609;&#3633;&#3591;&#3626;&#3639;&#3629;&#3619;&#3633;&#3610;&#3619;&#3629;&#3591;&#3585;&#3634;&#3619;&#3613;&#3638;&#3585;&#3591;&#3634;&#3609;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id101" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id101:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id101:anchor">&#3619;&#3634;&#3618;&#3591;&#3634;&#3609;&#3619;&#3634;&#3618;&#3594;&#3639;&#3656;&#3629;&#3610;&#3619;&#3636;&#3625;&#3633;&#3607;&#3607;&#3637;&#3656;&#3648;&#3588;&#3618;&#3619;&#3633;&#3610;&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634;&#3648;&#3586;&#3657;&#3634;&#3613;&#3638;&#3585;&#3591;&#3634;&#3609;</span></div><div class="rich-menu-list-strut"><div class="rich-menu-list-strut" style="">&#160;</div></div></div></div><script id="j_id21:j_id92_menu_script" type="text/javascript">new RichFaces.Menu.Layer('j_id21:j_id92_menu',{'hideDelay':800,'delay':50} ).asDropDown('j_id21:j_id92',{'direction':'bottom\x2Dright'} ).addItems([['j_id21:j_id93'] ,['j_id21:j_id94'] ,['j_id21:j_id95'] ,['j_id21:j_id96'] ,['j_id21:j_id97'] ,['j_id21:j_id98'] ,['j_id21:j_id99'] ,['j_id21:j_id100'] ,['j_id21:j_id101'] ] );</script></div></div></td><td align="center"><img src="/NewAcis/faces/a4j/g/3_3_3.Finalorg.richfaces.renderkit.html.images.LineSeparatorImage/DATB/eAFjDlkuvf7f!!!!GRgYJAAsfAXc" alt="" /></td><td class="rich-toolbar-item "><div class="rich-ddmenu-label rich-ddmenu-label-unselect  " id="j_id21:j_id102"><div class="rich-label-text-decor" id="j_id21:j_id102_span">&#3626;&#3617;&#3633;&#3588;&#3619;&#3591;&#3634;&#3609;</div><div style="margin: 0px; padding: 0px; border: 0px; position: absolute; z-index: 100;"><div id="j_id21:j_id102_menu" class="rich-menu-list-border" style="display: none; z-index: 2;"><div class="rich-menu-list-bg"><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id103" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id103:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id103:anchor">&#3588;&#3657;&#3609;&#3627;&#3634;&#3591;&#3634;&#3609;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id104" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id104:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id104:anchor">&#3585;&#3619;&#3629;&#3585;&#3649;&#3610;&#3610;&#3615;&#3629;&#3619;&#3660;&#3617;&#3611;&#3619;&#3632;&#3623;&#3633;&#3605;&#3636;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id105" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id105:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id105:anchor">&#3604;&#3641;&#3586;&#3656;&#3634;&#3623;&#3611;&#3619;&#3632;&#3594;&#3634;&#3626;&#3633;&#3617;&#3614;&#3633;&#3609;&#3608;&#3660; ,&#3605;&#3635;&#3649;&#3627;&#3609;&#3656;&#3591;&#3591;&#3634;&#3609; &#3649;&#3621;&#3632;&#3648;&#3585;&#3619;&#3655;&#3604;&#3588;&#3623;&#3634;&#3617;&#3619;&#3641;&#3657;</span></div><div class="rich-menu-list-strut"><div class="rich-menu-list-strut" style="">&#160;</div></div></div></div><script id="j_id21:j_id102_menu_script" type="text/javascript">new RichFaces.Menu.Layer('j_id21:j_id102_menu',{'hideDelay':800,'delay':50} ).asDropDown('j_id21:j_id102',{'direction':'bottom\x2Dright'} ).addItems([['j_id21:j_id103'] ,['j_id21:j_id104'] ,['j_id21:j_id105'] ] );</script></div></div></td><td align="center"><img src="/NewAcis/faces/a4j/g/3_3_3.Finalorg.richfaces.renderkit.html.images.LineSeparatorImage/DATB/eAFjDlkuvf7f!!!!GRgYJAAsfAXc" alt="" /></td><td class="rich-toolbar-item "><div class="rich-ddmenu-label rich-ddmenu-label-unselect  " id="j_id21:j_id106"><div class="rich-label-text-decor" id="j_id21:j_id106_span">&#3607;&#3640;&#3609;&#3585;&#3634;&#3619;&#3624;&#3638;&#3585;&#3625;&#3634;</div><div style="margin: 0px; padding: 0px; border: 0px; position: absolute; z-index: 100;"><div id="j_id21:j_id106_menu" class="rich-menu-list-border" style="display: none; z-index: 2;"><div class="rich-menu-list-bg"><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id107" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id107:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id107:anchor">&#3651;&#3610;&#3626;&#3617;&#3633;&#3588;&#3619;&#3586;&#3629;&#3619;&#3633;&#3610;&#3607;&#3640;&#3609;&#3585;&#3634;&#3619;&#3624;&#3638;&#3585;&#3625;&#3634;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id108" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id108:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id108:anchor">&#3626;&#3629;&#3610;&#3606;&#3634;&#3617;&#3612;&#3621;&#3585;&#3634;&#3619;&#3614;&#3636;&#3592;&#3634;&#3619;&#3603;&#3634;&#3629;&#3609;&#3640;&#3617;&#3633;&#3605;&#3636;&#3607;&#3640;&#3609;</span></div><div class="rich-menu-group rich-menu-group-enabled" id="j_id21:j_id109" onmouseout="RichFaces.Menu.groupMouseOut(event, this, '', '');" onmouseover="RichFaces.Menu.groupMouseOver(event, this, '', '');"><span class="rich-menu-item-icon-enabled rich-menu-group-icon " id="j_id21:j_id109:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/images/spacer.gif" width="16" /></span><span class="rich-menu-item-label rich-menu-group-label" id="j_id21:j_id109:anchor">&#3607;&#3640;&#3609;&#3592;&#3657;&#3634;&#3591;&#3591;&#3634;&#3609;</span><div class="rich-menu-node rich-menu-node-icon rich-menu-item-folder rich-menu-group-folder" id="j_id21:j_id109:folder">&#160;</div></div><div class="rich-menu-list-strut"><div class="rich-menu-list-strut" style="">&#160;</div></div></div></div><script id="j_id21:j_id106_menu_script" type="text/javascript">new RichFaces.Menu.Layer('j_id21:j_id106_menu',{'hideDelay':800,'delay':50} ).asDropDown('j_id21:j_id106',{'direction':'bottom\x2Dright'} ).addItems([['j_id21:j_id107'] ,['j_id21:j_id108'] ,['j_id21:j_id109',{'closeOnClick':false,'flagGroup':1} ] ] );</script><div id="j_id21:j_id109_menu" class="rich-menu-list-border" style="display: none; z-index: 2;"><div class="rich-menu-list-bg"><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id110" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id110:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id110:anchor">&#3610;&#3633;&#3609;&#3607;&#3638;&#3585;&#3648;&#3623;&#3621;&#3634;&#3611;&#3599;&#3636;&#3610;&#3633;&#3605;&#3636;&#3591;&#3634;&#3609; &#3607;&#3640;&#3609;&#3592;&#3657;&#3634;&#3591;&#3591;&#3634;&#3609;&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634;</span></div><div class="rich-menu-list-strut"><div class="rich-menu-list-strut" style="">&#160;</div></div></div></div><script id="j_id21:j_id109_menu_script" type="text/javascript">new RichFaces.Menu.Layer('j_id21:j_id109_menu').asSubMenu('j_id21:j_id106_menu','j_id21:j_id109').addItems([['j_id21:j_id110'] ] );</script></div></div></td><td align="center"><img src="/NewAcis/faces/a4j/g/3_3_3.Finalorg.richfaces.renderkit.html.images.LineSeparatorImage/DATB/eAFjDlkuvf7f!!!!GRgYJAAsfAXc" alt="" /></td><td class="rich-toolbar-item "><div class="rich-ddmenu-label rich-ddmenu-label-unselect  " id="j_id21:j_id111"><div class="rich-label-text-decor" id="j_id21:j_id111_span">&#3591;&#3634;&#3609;&#3585;&#3636;&#3592;&#3585;&#3619;&#3619;&#3617;&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634;</div><div style="margin: 0px; padding: 0px; border: 0px; position: absolute; z-index: 100;"><div id="j_id21:j_id111_menu" class="rich-menu-list-border" style="display: none; z-index: 2;"><div class="rich-menu-list-bg"><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id112" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id112:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id112:anchor">&#3604;&#3641;&#3586;&#3657;&#3629;&#3617;&#3641;&#3621;&#3650;&#3588;&#3619;&#3591;&#3585;&#3634;&#3619;&#3585;&#3636;&#3592;&#3585;&#3619;&#3619;&#3617;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id113" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id113:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id113:anchor">&#3650;&#3627;&#3623;&#3605;&#3650;&#3588;&#3619;&#3591;&#3585;&#3634;&#3619;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id114" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id114:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id114:anchor">&#3621;&#3591;&#3607;&#3632;&#3648;&#3610;&#3637;&#3618;&#3609;&#3648;&#3586;&#3657;&#3634;&#3619;&#3656;&#3623;&#3617;&#3650;&#3588;&#3619;&#3591;&#3585;&#3634;&#3619;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id115" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id115:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id115:anchor">&#3614;&#3636;&#3617;&#3614;&#3660;&#3651;&#3610;&#3586;&#3629;&#3629;&#3609;&#3640;&#3597;&#3634;&#3605;&#3621;&#3634;&#3648;&#3619;&#3637;&#3618;&#3609;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id116" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id116:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id116:anchor">&#3614;&#3636;&#3617;&#3614;&#3660;&#3651;&#3610;&#3586;&#3629;&#3629;&#3609;&#3640;&#3597;&#3634;&#3605;&#3612;&#3641;&#3657;&#3611;&#3585;&#3588;&#3619;&#3629;&#3591;</span></div><div class="rich-menu-item rich-menu-item-enabled" id="j_id21:j_id117" onclick="RichFaces.Menu.submitForm(event,this)"><span class="rich-menu-item-icon  " id="j_id21:j_id117:icon"><img alt="" height="16" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="16" /></span><span class="rich-menu-item-label" id="j_id21:j_id117:anchor">&#3614;&#3636;&#3617;&#3614;&#3660;&#3648;&#3629;&#3585;&#3626;&#3634;&#3619;&#3619;&#3633;&#3610;&#3619;&#3629;&#3591;&#3585;&#3634;&#3619;&#3611;&#3599;&#3636;&#3610;&#3633;&#3605;&#3636;&#3585;&#3636;&#3592;&#3585;&#3619;&#3619;&#3617;</span></div><div class="rich-menu-list-strut"><div class="rich-menu-list-strut" style="">&#160;</div></div></div></div><script id="j_id21:j_id111_menu_script" type="text/javascript">new RichFaces.Menu.Layer('j_id21:j_id111_menu',{'hideDelay':800,'delay':50} ).asDropDown('j_id21:j_id111',{'direction':'bottom\x2Dright'} ).addItems([['j_id21:j_id112'] ,['j_id21:j_id113'] ,['j_id21:j_id114'] ,['j_id21:j_id115'] ,['j_id21:j_id116'] ,['j_id21:j_id117'] ] );</script></div></div></td><td style="width:100%"></td><td class="rich-toolbar-item  " style=";"><script type="text/javascript">
+
+	function oamSetHiddenInput(formname, name, value)
+	{
+		var form = document.forms[formname];
+		if (typeof form == 'undefined')
+		{
+			form = document.getElementById(formname);
+		}
+		
+		if(typeof form.elements[name]!='undefined' && (form.elements[name].nodeName=='INPUT' || form.elements[name].nodeName=='input'))
+		{
+			form.elements[name].value=value;
+		}
+		else
+		{
+			var newInput = document.createElement('input');
+			newInput.setAttribute('type','hidden');
+			newInput.setAttribute('id',name);
+			newInput.setAttribute('name',name);
+			newInput.setAttribute('value',value);
+			form.appendChild(newInput);
+		}
+		
+	}
+	
+	
+	function oamClearHiddenInput(formname, name, value)
+	{
+		var form = document.forms[formname];
+		if (typeof form == 'undefined')
+		{
+			form = document.getElementById(formname);
+		}
+		
+		var hInput = form.elements[name];
+		if(typeof hInput !='undefined')
+		{
+			form.removeChild(hInput);
+		}
+		
+	}
+	
+	function oamSubmitForm(formName, linkId, target, params)
+	{
+		
+		var clearFn = 'clearFormHiddenParams_'+formName.replace(/-/g, '\$:').replace(/:/g,'_');
+		if(typeof window[clearFn] =='function')
+		{
+			window[clearFn](formName);
+		}
+		
+		var form = document.forms[formName];
+		if (typeof form == 'undefined')
+		{
+			form = document.getElementById(formName);
+		}
+		
+		var oldTarget = form.target;
+		if(target != null)
+		{
+			
+			form.target=target;
+		}
+		if((typeof params!='undefined') && params != null)
+		{
+			
+			for(var i=0, param; (param = params[i]); i++)
+			{
+				oamSetHiddenInput(formName,param[0], param[1]);
+			}
+			
+		}
+		
+		oamSetHiddenInput(formName,formName +':'+'_idcl',linkId);
+		
+		if(form.onsubmit)
+		{
+			var result=form.onsubmit();
+			if((typeof result=='undefined')||result)
+			{
+				try
+				{
+					form.submit();
+				}
+				catch(e){}
+			}
+			
+		}
+		else 
+		{
+			try
+			{
+				form.submit();
+			}
+			catch(e){}
+		}
+		
+		form.target=oldTarget;
+		if((typeof params!='undefined') && params != null)
+		{
+			
+			for(var i=0, param; (param = params[i]); i++)
+			{
+				oamClearHiddenInput(formName,param[0], param[1]);
+			}
+			
+		}
+		
+		oamClearHiddenInput(formName,formName +':'+'_idcl',linkId);return false;
+	}
+	
+</script><a href="#" onclick="return oamSubmitForm('j_id21','j_id21:j_id24');"><img id="j_id21:englishLangImage" src="/NewAcis/images/gb.png" alt="EN" style="border:0; padding:0px;margin-top:6px;" /></a></td><td class="rich-toolbar-item  " style=";"><span style="position:relative;top:3px;">67120501028</span></td><td class="rich-toolbar-item  " style=";"><a href="#" onclick="return oamSubmitForm('j_id21','j_id21:j_id26');" style="font-size:12px;color:white;position:relative;top:3px;">&#3629;&#3629;&#3585;&#3592;&#3634;&#3585;&#3619;&#3632;&#3610;&#3610;</a></td></tr></table><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id11" />
+</form>
+		</div>
+
+		<div id="divContent"><div id="currentTaskNameDivId" style="text-align:right;"><span style="font-weight:bold;margin-right:20px;">&#3619;&#3627;&#3633;&#3626;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617; : Student Affair-512003</span></div><fieldset><legend>ใบสมัครขอรับทุนการศึกษา </legend>
+<form id="j_id26" name="j_id26" method="post" action="/NewAcis/secured/studentAffair/scholarship/scholarshipApplicationPage2.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id26" value="j_id26" />
+<span id="_viewRoot:status"><span id="_viewRoot:status.start" style="display: none"></span><script type="text/javascript">
+window.document.getElementById('_viewRoot:status.start').onstart=function(){document.getElementById('modalLoading').component.show();};
+</script><span id="_viewRoot:status.stop"></span><script type="text/javascript">
+window.document.getElementById('_viewRoot:status.stop').onstop=function(){document.getElementById('modalLoading').component.hide();};
+</script></span><table border="0" cellpadding="5" style="margin: auto;"><tbody><tr><td class="col1"><span style="margin-left:20px;">&#3611;&#3637;&#3585;&#3634;&#3619;&#3624;&#3638;&#3585;&#3625;&#3634; : </span></td><td class="col2"><span class="display-Message"> / </span></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634; : </span></td><td class="col2"><span class="display-Message"> </span></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">&#3594;&#3639;&#3656;&#3629;&#3607;&#3640;&#3609;&#3585;&#3634;&#3619;&#3624;&#3638;&#3585;&#3625;&#3634; : </span></td><td class="col2"><span class="display-Message"></span></td></tr>
+<tr><td class="col1" colspan="2"><table border="0" cellpadding="0" cellspacing="0" width="990px"><tbody><tr class="top"><td class="col2"><span style="color:red; font-weight:bold;">*</span></td><td class="col2"><div style="color:red; font-weight:bold;">กรุณาตรวจสอบข้อมูลเดิมของผู้สมัคร ถ้าข้อมูลไม่ถูกต้อง ให้ดำเนินการแก้ไขในระบบทะเบียนประวัตินักศึกษา ก่อนบันทึกใบสมัคร <br> ทั้งนี้ หากพบข้อมูลผู้สมัครทุนไม่เป็นความจริง จะไม่ได้รับการพิจารณาทุน</div></td><td class="col1"><div id="j_id26:pgStatus" style="float:right;">&#3626;&#3606;&#3634;&#3609;&#3632;&#3651;&#3610;&#3626;&#3617;&#3633;&#3588;&#3619; : <span class="display-Message"></span></div></td></tr>
+</tbody></table></td></tr>
+<tr><td class="col1" colspan="2"><div id="j_id26:pgTab"><script type="text/javascript">RichFaces.tabPanel['j_id26:tabPanel']={'id':'j_id26:tabPanel','ontabchange':''} ;</script><table border="0" cellpadding="0" cellspacing="0" class="rich-tabpanel " id="j_id26:tabPanel" style="width:990px"><tbody><tr><td align="left" class="rich-tab-bottom-line "><!--table  border="0" cellpadding="0" cellspacing="0" style="position:relative;top:1px"--><table border="0" cellpadding="0" cellspacing="0"><tr><td><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="width: 1px; ;border:0" /></td><td id="j_id26:tab1_cell" style="height: 100%; vertical-align: bottom;" class="rich-tabhdr-cell-disabled"><table border="0" cellpadding="0" cellspacing="0" id="j_id26:tab1_shifted" style="position:relative; top:1px;;height : 100%; "><tr><td class="rich-tabhdr-side-border"><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="border:0" width="1" /></td><td class="rich-tabhdr-side-cell"><table border="0" cellpadding="0" cellspacing="0" style="height: 100%; width: 100%;"><tr><td id="j_id26:tab1_lbl" class="rich-tab-header rich-tab-disabled    ">&#3586;&#3657;&#3629;&#3617;&#3641;&#3621;&#3626;&#3656;&#3623;&#3609;&#3605;&#3633;&#3623;</td></tr></table></td><td class="rich-tabhdr-side-border"><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="border:0" width="1" /></td></tr></table></td><td><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="width: 1px; ;border:0" /></td><td id="j_id26:tab2_cell" style="height: 100%; vertical-align: bottom;" class="rich-tabhdr-cell-disabled"><table border="0" cellpadding="0" cellspacing="0" id="j_id26:tab2_shifted" style="position:relative;;height : 100%; "><tr><td class="rich-tabhdr-side-border"><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="border:0" width="1" /></td><td class="rich-tabhdr-side-cell"><table border="0" cellpadding="0" cellspacing="0" style="height: 100%; width: 100%;"><tr><td id="j_id26:tab2_lbl" class="rich-tab-header rich-tab-disabled    ">&#3607;&#3637;&#3656;&#3629;&#3618;&#3641;&#3656;</td></tr></table></td><td class="rich-tabhdr-side-border"><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="border:0" width="1" /></td></tr></table></td><td><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="width: 1px; ;border:0" /></td><td id="j_id26:tab3_cell" style="height: 100%; vertical-align: bottom;" class="rich-tabhdr-cell-disabled"><table border="0" cellpadding="0" cellspacing="0" id="j_id26:tab3_shifted" style="position:relative;;height : 100%; "><tr><td class="rich-tabhdr-side-border"><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="border:0" width="1" /></td><td class="rich-tabhdr-side-cell"><table border="0" cellpadding="0" cellspacing="0" style="height: 100%; width: 100%;"><tr><td id="j_id26:tab3_lbl" class="rich-tab-header rich-tab-disabled    ">&#3586;&#3657;&#3629;&#3617;&#3641;&#3621;&#3588;&#3619;&#3629;&#3610;&#3588;&#3619;&#3633;&#3623;</td></tr></table></td><td class="rich-tabhdr-side-border"><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="border:0" width="1" /></td></tr></table></td><td><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="width: 1px; ;border:0" /></td><td id="j_id26:tab4_cell" style="height: 100%; vertical-align: bottom;" class="rich-tabhdr-cell-disabled"><table border="0" cellpadding="0" cellspacing="0" id="j_id26:tab4_shifted" style="position:relative;;height : 100%; "><tr><td class="rich-tabhdr-side-border"><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="border:0" width="1" /></td><td class="rich-tabhdr-side-cell"><table border="0" cellpadding="0" cellspacing="0" style="height: 100%; width: 100%;"><tr><td id="j_id26:tab4_lbl" class="rich-tab-header rich-tab-disabled    ">&#3586;&#3657;&#3629;&#3617;&#3641;&#3621;&#3585;&#3634;&#3619;&#3648;&#3591;&#3636;&#3609;</td></tr></table></td><td class="rich-tabhdr-side-border"><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="border:0" width="1" /></td></tr></table></td><td><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="width: 1px; ;border:0" /></td><td id="j_id26:tab5_cell" style="height: 100%; vertical-align: bottom;" class="rich-tabhdr-cell-disabled"><table border="0" cellpadding="0" cellspacing="0" id="j_id26:tab5_shifted" style="position:relative;;height : 100%; "><tr><td class="rich-tabhdr-side-border"><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="border:0" width="1" /></td><td class="rich-tabhdr-side-cell"><table border="0" cellpadding="0" cellspacing="0" style="height: 100%; width: 100%;"><tr><td id="j_id26:tab5_lbl" class="rich-tab-header rich-tab-disabled    ">&#3629;&#3639;&#3656;&#3609;&#3654;</td></tr></table></td><td class="rich-tabhdr-side-border"><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="border:0" width="1" /></td></tr></table></td><td><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="width: 1px; ;border:0" /></td><td id="j_id26:tab6_cell" style="height: 100%; vertical-align: bottom;" class="rich-tabhdr-cell-disabled"><table border="0" cellpadding="0" cellspacing="0" id="j_id26:tab6_shifted" style="position:relative;;height : 100%; "><tr><td class="rich-tabhdr-side-border"><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="border:0" width="1" /></td><td class="rich-tabhdr-side-cell"><table border="0" cellpadding="0" cellspacing="0" style="height: 100%; width: 100%;"><tr><td id="j_id26:tab6_lbl" class="rich-tab-header rich-tab-disabled    ">&#3619;&#3634;&#3618;&#3621;&#3632;&#3648;&#3629;&#3637;&#3618;&#3604;&#3585;&#3634;&#3619;&#3586;&#3629;&#3607;&#3640;&#3609;</td></tr></table></td><td class="rich-tabhdr-side-border"><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="border:0" width="1" /></td></tr></table></td><td><img alt="" height="1" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" style="width: 1px; ;border:0" /></td></tr></table><div style="display: none;"><script type="text/javascript">RichFaces.panelTabs['j_id26:tabPanel']=[] ;</script></div></td></tr><tr><td id="j_id26:tab1" style=";height:100%"><table border="0" cellpadding="10" cellspacing="0" class="rich-tabpanel-content-position" width="100%"><tr><td class="rich-tabpanel-content  " style="; "><span id="j_id26:j_id42"><table border="0" cellpadding="5" style="margin: auto;"><tbody><tr class="top"><td class="col1"><span style="margin-left:10px;">&#3623;&#3633;&#3609;/&#3648;&#3604;&#3639;&#3629;&#3609;/&#3611;&#3637;&#3648;&#3585;&#3636;&#3604; : </span></td><td class="col2"><span class="display-Message" style="margin-left:5px;"></span></td><td class="col1"><span style="margin-left:10px;">&#3629;&#3634;&#3618;&#3640; : </span></td><td class="col2" colspan="3"><span class="display-Message" style="margin-left:5px;"></span><span style="margin-left:10px;">&#3611;&#3637;</span></td></tr>
+<tr class="top"><td class="col1"><span style="margin-left:10px;">&#3648;&#3594;&#3639;&#3657;&#3629;&#3594;&#3634;&#3605;&#3636; : </span></td><td class="col2"><span class="display-Message" style="margin-left:5px;"></span></td><td class="col1"><span style="margin-left:10px;">&#3626;&#3633;&#3597;&#3594;&#3634;&#3605;&#3636;  : </span></td><td class="col2"><span class="display-Message" style="margin-left:5px;"></span></td><td class="col1"><span style="margin-left:10px;">&#3624;&#3634;&#3626;&#3609;&#3634; : </span></td><td class="col2"><span class="display-Message" style="margin-left:5px;"></span></td></tr>
+<tr class="top"><td class="col1"><span style="margin-left:10px;">&#3648;&#3621;&#3586;&#3607;&#3637;&#3656;&#3610;&#3633;&#3605;&#3619;&#3611;&#3619;&#3632;&#3594;&#3634;&#3594;&#3609; : </span></td><td class="col2"><span class="display-Message" style="margin-left:5px;"></span></td><td class="col1"><span style="margin-left:10px;">ออกให้เมื่อวันที่<span class='required'>*</span>: </span></td><td class="col2" colspan="3"><input id="datepickerIdCardIssueDate" name="datepickerIdCardIssueDate" type="text" value="" maxlength="10" size="10" style="margin-left:5px;" /></td></tr>
+<tr class="top"><td class="col1"><span style="margin-left:10px;">&#3650;&#3607;&#3619;&#3624;&#3633;&#3614;&#3607;&#3660;&#3607;&#3637;&#3656;&#3626;&#3634;&#3617;&#3634;&#3619;&#3606;&#3605;&#3636;&#3604;&#3605;&#3656;&#3629;&#3652;&#3604;&#3657; / &#3617;&#3639;&#3629;&#3606;&#3639;&#3629; : </span></td><td class="col2"><span class="display-Message" style="margin-left:5px;"></span></td><td class="col1"><span style="margin-left:10px;">E-Mail Address : </span></td><td class="col2" colspan="3"><span class="display-Message" style="margin-left:5px;"></span></td></tr>
+<tr class="top"><td class="col1"><span style="margin-left:10px;">&#3588;&#3603;&#3632; : </span></td><td class="col2" colspan="5"><span class="display-Message" style="margin-left:5px;"></span></td></tr>
+<tr class="top"><td class="col1"><span style="margin-left:10px;">&#3616;&#3634;&#3588;/&#3626;&#3634;&#3618;&#3623;&#3636;&#3594;&#3634; : </span></td><td class="col2" colspan="5"><span class="display-Message" style="margin-left:5px;"></span></td></tr>
+<tr class="top"><td class="col1"><span style="margin-left:10px;">&#3626;&#3634;&#3586;&#3634;&#3623;&#3636;&#3594;&#3634; : </span></td><td class="col2" colspan="5"><span class="display-Message" style="margin-left:5px;"></span></td></tr>
+<tr class="top"><td class="col1"><span style="margin-left:10px;">&#3594;&#3633;&#3657;&#3609;&#3611;&#3637; : </span></td><td class="col2"><span class="display-Message" style="margin-left:5px;"></span></td><td class="col1"><span style="margin-left:10px;">&#3627;&#3657;&#3629;&#3591; : </span></td><td class="col2"><span class="display-Message" style="margin-left:5px;"></span></td><td class="col1"><span style="margin-left:10px;">&#3588;&#3632;&#3649;&#3609;&#3609;&#3648;&#3593;&#3621;&#3637;&#3656;&#3618;&#3626;&#3632;&#3626;&#3617; : </span></td><td class="col2"><span class="display-Message" style="margin-left:5px;"></span></td></tr>
+<tr class="top"><td class="col1"><span style="margin-left:10px;">&#3629;&#3634;&#3592;&#3634;&#3619;&#3618;&#3660;&#3607;&#3637;&#3656;&#3611;&#3619;&#3638;&#3585;&#3625;&#3634; : </span></td><td class="col2" colspan="5"><span class="display-Message" style="margin-left:5px;"></span></td></tr>
+<tr class="top"><td class="col1"><span style="margin-left:10px;">&#3627;&#3621;&#3633;&#3585;&#3626;&#3641;&#3605;&#3619;&#3585;&#3634;&#3619;&#3624;&#3638;&#3585;&#3625;&#3634; : </span></td><td class="col2" colspan="3"><span class="display-Message" style="margin-left:5px;"></span></td><td class="col1"><span style="margin-left:10px;">&#3619;&#3632;&#3618;&#3632;&#3648;&#3623;&#3621;&#3634;&#3585;&#3634;&#3619;&#3624;&#3638;&#3585;&#3625;&#3634; : </span></td><td class="col2"><span class="display-Message" style="margin-left:5px;"></span><span style="margin-left:10px;">&#3611;&#3637;</span></td></tr>
+<tr class="top"><td class="col1"><span style="margin-left:10px;">&#3585;&#3619;&#3603;&#3637;&#3648;&#3611;&#3655;&#3609;&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634;&#3651;&#3627;&#3617;&#3656; &#3592;&#3610;&#3592;&#3634;&#3585; : </span></td><td class="col2" colspan="3"><span class="display-Message" style="margin-left:5px;"></span></td><td class="col1"><span style="margin-left:10px;">&#3588;&#3632;&#3649;&#3609;&#3609;&#3648;&#3593;&#3621;&#3637;&#3656;&#3618;&#3626;&#3632;&#3626;&#3617; : </span></td><td class="col2"><span class="display-Message" style="margin-left:5px;"></span></td></tr>
+<tr class="top"><td class="col1" colspan="6"><img alt="" class="rich-spacer " height="10" id="j_id26:j_id42:j_id98" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="1" /></td></tr>
+<tr class="top"><td class="col1" colspan="6"><div style="width:100%;text-align:center;"><input class="button-navigate" id="j_id26:j_id42:j_id100" name="j_id26:j_id42:j_id100" onclick="A4J.AJAX.Submit('j_id26',event,{'similarityGroupingId':'j_id26:j_id42:j_id100','parameters':{'j_id26:j_id42:j_id100':'j_id26:j_id42:j_id100'} } );return false;" value="&#3627;&#3609;&#3657;&#3634;&#3606;&#3633;&#3604;&#3652;&#3611; &gt;&gt;" type="button" /></div></td></tr>
+</tbody></table>
+	
+	<script type="text/javascript">
+		<!--
+		jQuery(document).ready(function() {
+			jQuery('input[id^="datepicker"]').datepicker({
+						changeMonth: true,
+						changeYear: true,
+						showOn: 'button', 
+						buttonImageOnly: true,
+						buttonImage: '/NewAcis/images/calendar.gif',	
+					    beforeShow: function() {jQuery('#ui-datepicker-div').css('z-index',1000); }	
+																			
+			});
+			//jQuery('input[id^="datepicker"]').attr('readOnly',true);
+			jQuery('input[id^="datepicker"]').change(function(){
+		    	jQuery(this).val(formatEntryDate(jQuery(this).val()));
+	    	});
+	    });
+		-->	
+	</script></span></td></tr></table></td></tr></tbody></table></div></td></tr>
+</tbody></table><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id11" />
+</form>
+<form id="j_id1062" name="j_id1062" method="post" action="/NewAcis/secured/studentAffair/scholarship/scholarshipApplicationPage2.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id1062" value="j_id1062" />
+<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id11" />
+</form></fieldset><div id="relativeEduModal" style="display: none;"><input autocomplete="off" id="relativeEduModalOpenedState" name="relativeEduModalOpenedState" type="hidden" /><div class="rich-modalpanel " id="relativeEduModalContainer" style="position: absolute; display: none; z-index: 100; background-color: inherit;"><div class="rich-mpnl-mask-div-opaque rich-mpnl-mask-div" id="relativeEduModalDiv" style="z-index: -1;"><button class="rich-mpnl-button" id="relativeEduModalFirstHref"></button></div><div class="rich-mpnl-panel"><div class="rich-mp-container" id="relativeEduModalCDiv" style="position: absolute; left: 0px; top: 0px; z-index: 9;"><div class="rich-mpnl-shadow" id="relativeEduModalShadowDiv"></div><div class=" rich-mpnl-content" id="relativeEduModalContentDiv"><div class="rich-mpnl-text rich-mpnl-controls ">
+<form id="j_id1065" name="j_id1065" method="post" action="/NewAcis/secured/studentAffair/scholarship/scholarshipApplicationPage2.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id1065" value="j_id1065" />
+<a href="#" id="j_id1065:j_id1066" name="j_id1065:j_id1066" onclick="A4J.AJAX.Submit('j_id1065',event,{'similarityGroupingId':'j_id1065:j_id1066','parameters':{'j_id1065:j_id1066':'j_id1065:j_id1066'} } );return false;"><img src="/NewAcis/images/close.png" alt="" border="0" /></a><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id11" />
+</form></div><table border="0" cellpadding="0" cellspacing="0" class="rich-mp-content-table" id="relativeEduModalContentTable" style="width: 800px;height: 1px;"><tr style="height: 1%;"><td class="rich-mpnl-header-cell"><div class="rich-mpnl-text rich-mpnl-header " id="relativeEduModalHeader" style="white-space: nowrap;">&#3617;&#3637;&#3614;&#3637;&#3656;&#3609;&#3657;&#3629;&#3591;&#3607;&#3637;&#3656;&#3585;&#3635;&#3621;&#3633;&#3591;&#3624;&#3638;&#3585;&#3625;&#3634;&#3629;&#3618;&#3641;&#3656;</div></td></tr><tr style="height: 99%"><td class="rich-mpnl-body" valign="top">
+<form id="j_id1068" name="j_id1068" method="post" action="/NewAcis/secured/studentAffair/scholarship/scholarshipApplicationPage2.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id1068" value="j_id1068" />
+<table border="0" cellpadding="5" style="margin: auto;"><tbody><tr><td class="col1"><span style="margin-left:20px;">&#3611;&#3637;&#3585;&#3634;&#3619;&#3624;&#3638;&#3585;&#3625;&#3634; : </span></td><td class="col2"><span class="display-Message"> / </span></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634; : </span></td><td class="col2"><span class="display-Message"> </span></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">&#3594;&#3639;&#3656;&#3629;&#3607;&#3640;&#3609;&#3585;&#3634;&#3619;&#3624;&#3638;&#3585;&#3625;&#3634; : </span></td><td class="col2"><span class="display-Message"></span></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">คนที่<span class='required'>*</span>: </span></td><td class="col2"><input id="j_id1068:j_id1077" name="j_id1068:j_id1077" type="text" value="0" maxlength="2" onkeypress="return filterInput(1, event, false, '')" style="width:50px; text-align:right;" onblur="this.value = numberFormat(this.value, 0, 'N', '0')" /></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">เพศ<span class='required'>*</span>: </span></td><td class="col2"><table><tr>		<td><input id="j_id1068:j_id1079:0" type="radio" name="j_id1068:j_id1079" value="M" /><label for="j_id1068:j_id1079:0">&#160;&#3594;&#3634;&#3618;</label></td>		<td><input id="j_id1068:j_id1079:1" type="radio" name="j_id1068:j_id1079" value="F" /><label for="j_id1068:j_id1079:1">&#160;&#3627;&#3597;&#3636;&#3591;</label></td></tr></table></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">อายุ<span class='required'>*</span>: </span></td><td class="col2"><input id="j_id1068:j_id1083" name="j_id1068:j_id1083" type="text" value="0" maxlength="2" onkeypress="return filterInput(1, event, false, '')" style="width:50px; text-align:right;" onblur="this.value = numberFormat(this.value, 0, 'N', '0')" /></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">ชั้นปี<span class='required'>*</span>: </span></td><td class="col2"><input id="j_id1068:j_id1085" name="j_id1068:j_id1085" type="text" value="0" maxlength="2" onkeypress="return filterInput(1, event, false, '')" style="width:50px; text-align:right;" onblur="this.value = numberFormat(this.value, 0, 'N', '0')" /></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">สถาบันการศึกษา<span class='required'>*</span>: </span></td><td class="col2"><input id="j_id1068:j_id1088" name="j_id1068:j_id1088" type="text" value="" maxlength="100" style="width:500px" /></td></tr>
+<tr><td class="col1"></td><td class="col2"><span style="color:red;">&#3585;&#3619;&#3640;&#3603;&#3634;&#3585;&#3619;&#3629;&#3585; &#3594;&#3639;&#3656;&#3629;&#3626;&#3606;&#3634;&#3609;&#3624;&#3638;&#3585;&#3625;&#3634; &#3651;&#3627;&#3657;&#3606;&#3641;&#3585;&#3605;&#3657;&#3629;&#3591;</span></td></tr>
+<tr><td class="col1" colspan="2"><img alt="" class="rich-spacer " height="10" id="j_id1068:j_id1092" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="1" /></td></tr>
+<tr><td class="col1" colspan="2"><div style="width:100%; text-align:center;"><input class="button-navigate" id="j_id1068:j_id1094" name="j_id1068:j_id1094" onclick="A4J.AJAX.Submit('j_id1068',event,{'similarityGroupingId':'j_id1068:j_id1094','parameters':{'j_id1068:j_id1094':'j_id1068:j_id1094'} } );return false;" value="&#3605;&#3585;&#3621;&#3591;" type="button" /><img alt="" class="rich-spacer " height="1" id="j_id1068:j_id1095" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="10" /><input class="button-navigate" id="j_id1068:j_id1096" name="j_id1068:j_id1096" onclick="A4J.AJAX.Submit('j_id1068',event,{'similarityGroupingId':'j_id1068:j_id1096','parameters':{'j_id1068:j_id1096':'j_id1068:j_id1096'} } );return false;" value="&#3618;&#3585;&#3648;&#3621;&#3636;&#3585;" type="button" /></div></td></tr>
+</tbody></table><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id11" />
+</form></td></tr></table></div></div></div><div class="rich-mpnl-mask-div rich-mpnl-mask-div-transparent" id="relativeEduModalCursorDiv" style="z-index: -200;"><button class="rich-mpnl-button" id="relativeEduModalLastHref"></button></div><script type="text/javascript">new ModalPanel('relativeEduModal',
+				{
+					width: 800,
+					height: -1,
+
+					minWidth: -1,
+					minHeight: -1,
+
+					resizeable: false,
+					moveable: true,
+
+					left: "auto",
+					top: "auto",
+
+					zindex: 100,onresize: '',onmove: '',onshow: '',onhide: '',onbeforeshow: '',onbeforehide: '',
+					domElementAttachment: "",				
+					keepVisualState: false,
+					showWhenRendered: false,
+					selectBehavior: "disable",
+
+					autosized: true,
+					overlapEmbedObjects: false});</script></div><script type="text/javascript"></script></div><div id="relativeWorkModal" style="display: none;"><input autocomplete="off" id="relativeWorkModalOpenedState" name="relativeWorkModalOpenedState" type="hidden" /><div class="rich-modalpanel " id="relativeWorkModalContainer" style="position: absolute; display: none; z-index: 100; background-color: inherit;"><div class="rich-mpnl-mask-div-opaque rich-mpnl-mask-div" id="relativeWorkModalDiv" style="z-index: -1;"><button class="rich-mpnl-button" id="relativeWorkModalFirstHref"></button></div><div class="rich-mpnl-panel"><div class="rich-mp-container" id="relativeWorkModalCDiv" style="position: absolute; left: 0px; top: 0px; z-index: 9;"><div class="rich-mpnl-shadow" id="relativeWorkModalShadowDiv"></div><div class=" rich-mpnl-content" id="relativeWorkModalContentDiv"><div class="rich-mpnl-text rich-mpnl-controls ">
+<form id="j_id1098" name="j_id1098" method="post" action="/NewAcis/secured/studentAffair/scholarship/scholarshipApplicationPage2.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id1098" value="j_id1098" />
+<a href="#" id="j_id1098:j_id1099" name="j_id1098:j_id1099" onclick="A4J.AJAX.Submit('j_id1098',event,{'similarityGroupingId':'j_id1098:j_id1099','parameters':{'j_id1098:j_id1099':'j_id1098:j_id1099'} } );return false;"><img src="/NewAcis/images/close.png" alt="" border="0" /></a><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id11" />
+</form></div><table border="0" cellpadding="0" cellspacing="0" class="rich-mp-content-table" id="relativeWorkModalContentTable" style="width: 600px;height: 1px;"><tr style="height: 1%;"><td class="rich-mpnl-header-cell"><div class="rich-mpnl-text rich-mpnl-header " id="relativeWorkModalHeader" style="white-space: nowrap;">&#3617;&#3637;&#3614;&#3637;&#3656;&#3609;&#3657;&#3629;&#3591;&#3607;&#3637;&#3656;&#3611;&#3619;&#3632;&#3585;&#3629;&#3610;&#3629;&#3634;&#3594;&#3637;&#3614;</div></td></tr><tr style="height: 99%"><td class="rich-mpnl-body" valign="top">
+<form id="j_id1101" name="j_id1101" method="post" action="/NewAcis/secured/studentAffair/scholarship/scholarshipApplicationPage2.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id1101" value="j_id1101" />
+<table border="0" cellpadding="5" style="margin: auto;"><tbody><tr><td class="col1"><span style="margin-left:20px;">&#3611;&#3637;&#3585;&#3634;&#3619;&#3624;&#3638;&#3585;&#3625;&#3634; : </span></td><td class="col2"><span class="display-Message"> / </span></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634; : </span></td><td class="col2"><span class="display-Message"> </span></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">&#3594;&#3639;&#3656;&#3629;&#3607;&#3640;&#3609;&#3585;&#3634;&#3619;&#3624;&#3638;&#3585;&#3625;&#3634; : </span></td><td class="col2"><span class="display-Message"></span></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">คนที่<span class='required'>*</span>: </span></td><td class="col2"><input id="j_id1101:j_id1111" name="j_id1101:j_id1111" type="text" value="0" maxlength="2" onkeypress="return filterInput(1, event, false, '')" style="width:50px; text-align:right;" onblur="this.value = numberFormat(this.value, 0, 'N', '0')" /><span style="margin-left:50px;">อายุ<span class='required'>*</span>: </span><input id="j_id1101:j_id1113" name="j_id1101:j_id1113" type="text" value="0" maxlength="2" onkeypress="return filterInput(1, event, false, '')" style="margin-left:10px; width:50px; text-align:right;" onblur="this.value = numberFormat(this.value, 0, 'N', '0')" /></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">เพศ<span class='required'>*</span>: </span></td><td class="col2"><table><tr>		<td><input id="j_id1101:j_id1115:0" type="radio" name="j_id1101:j_id1115" value="M" /><label for="j_id1101:j_id1115:0">&#160;&#3594;&#3634;&#3618;</label></td>		<td><input id="j_id1101:j_id1115:1" type="radio" name="j_id1101:j_id1115" value="F" /><label for="j_id1101:j_id1115:1">&#160;&#3627;&#3597;&#3636;&#3591;</label></td></tr></table></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">วุฒิการศึกษา<span class='required'>*</span>: </span></td><td class="col2"><select name="j_id1101:j_id1119" size="1">	<option value="" selected="selected">&#3648;&#3621;&#3639;&#3629;&#3585;...</option></select></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">&#3629;&#3634;&#3594;&#3637;&#3614; / &#3605;&#3635;&#3649;&#3627;&#3609;&#3656;&#3591; : </span></td><td class="col2"><input id="j_id1101:j_id1123" name="j_id1101:j_id1123" type="text" value="" maxlength="100" style="width:200px;" /></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">&#3619;&#3634;&#3618;&#3652;&#3604;&#3657;&#3605;&#3656;&#3629;&#3648;&#3604;&#3639;&#3629;&#3609; : </span></td><td class="col2"><input id="j_id1101:strIncomePerMonthWork" name="j_id1101:strIncomePerMonthWork" type="text" value="0.00" maxlength="20" onkeypress="return filterInput(1, event, false, ',.')" style="width:200px; text-align:right;" onblur="this.value = numberFormat(this.value, 2, 'Y', '0')" onchange="A4J.AJAX.Submit('j_id1101',event,{'similarityGroupingId':'j_id1101:j_id1126','parameters':{'j_id1101:j_id1126':'j_id1101:j_id1126'} ,'containerId':'j_id1101:j_id1125'} )" /></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">&#3650;&#3607;&#3619;&#3624;&#3633;&#3614;&#3607;&#3660; : </span></td><td class="col2"><input id="j_id1101:j_id1128" name="j_id1101:j_id1128" type="text" value="" maxlength="20" style="width:200px;" /></td></tr>
+<tr><td class="col1" colspan="2"><img alt="" class="rich-spacer " height="10" id="j_id1101:j_id1130" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="1" /></td></tr>
+<tr><td class="col1" colspan="2"><div style="width:100%; text-align:center;"><input class="button-navigate" id="j_id1101:j_id1132" name="j_id1101:j_id1132" onclick="A4J.AJAX.Submit('j_id1101',event,{'similarityGroupingId':'j_id1101:j_id1132','parameters':{'j_id1101:j_id1132':'j_id1101:j_id1132'} } );return false;" value="&#3605;&#3585;&#3621;&#3591;" type="button" /><img alt="" class="rich-spacer " height="1" id="j_id1101:j_id1133" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="10" /><input class="button-navigate" id="j_id1101:j_id1134" name="j_id1101:j_id1134" onclick="A4J.AJAX.Submit('j_id1101',event,{'similarityGroupingId':'j_id1101:j_id1134','parameters':{'j_id1101:j_id1134':'j_id1101:j_id1134'} } );return false;" value="&#3618;&#3585;&#3648;&#3621;&#3636;&#3585;" type="button" /></div></td></tr>
+</tbody></table><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id11" />
+</form></td></tr></table></div></div></div><div class="rich-mpnl-mask-div rich-mpnl-mask-div-transparent" id="relativeWorkModalCursorDiv" style="z-index: -200;"><button class="rich-mpnl-button" id="relativeWorkModalLastHref"></button></div><script type="text/javascript">new ModalPanel('relativeWorkModal',
+				{
+					width: 600,
+					height: -1,
+
+					minWidth: -1,
+					minHeight: -1,
+
+					resizeable: false,
+					moveable: true,
+
+					left: "auto",
+					top: "auto",
+
+					zindex: 100,onresize: '',onmove: '',onshow: '',onhide: '',onbeforeshow: '',onbeforehide: '',
+					domElementAttachment: "",				
+					keepVisualState: false,
+					showWhenRendered: false,
+					selectBehavior: "disable",
+
+					autosized: true,
+					overlapEmbedObjects: false});</script></div><script type="text/javascript"></script></div><div id="activityModal" style="display: none;"><input autocomplete="off" id="activityModalOpenedState" name="activityModalOpenedState" type="hidden" /><div class="rich-modalpanel " id="activityModalContainer" style="position: absolute; display: none; z-index: 100; background-color: inherit;"><div class="rich-mpnl-mask-div-opaque rich-mpnl-mask-div" id="activityModalDiv" style="z-index: -1;"><button class="rich-mpnl-button" id="activityModalFirstHref"></button></div><div class="rich-mpnl-panel"><div class="rich-mp-container" id="activityModalCDiv" style="position: absolute; left: 0px; top: 0px; z-index: 9;"><div class="rich-mpnl-shadow" id="activityModalShadowDiv"></div><div class=" rich-mpnl-content" id="activityModalContentDiv"><div class="rich-mpnl-text rich-mpnl-controls ">
+<form id="j_id1136" name="j_id1136" method="post" action="/NewAcis/secured/studentAffair/scholarship/scholarshipApplicationPage2.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id1136" value="j_id1136" />
+<a href="#" id="j_id1136:j_id1137" name="j_id1136:j_id1137" onclick="A4J.AJAX.Submit('j_id1136',event,{'similarityGroupingId':'j_id1136:j_id1137','parameters':{'j_id1136:j_id1137':'j_id1136:j_id1137'} } );return false;"><img src="/NewAcis/images/close.png" alt="" border="0" /></a><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id11" />
+</form></div><table border="0" cellpadding="0" cellspacing="0" class="rich-mp-content-table" id="activityModalContentTable" style="width: 600px;height: 1px;"><tr style="height: 1%;"><td class="rich-mpnl-header-cell"><div class="rich-mpnl-text rich-mpnl-header " id="activityModalHeader" style="white-space: nowrap;">&#3585;&#3636;&#3592;&#3585;&#3619;&#3619;&#3617;&#3651;&#3609;&#3617;&#3627;&#3634;&#3623;&#3636;&#3607;&#3618;&#3634;&#3621;&#3633;&#3618;</div></td></tr><tr style="height: 99%"><td class="rich-mpnl-body" valign="top">
+<form id="j_id1139" name="j_id1139" method="post" action="/NewAcis/secured/studentAffair/scholarship/scholarshipApplicationPage2.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id1139" value="j_id1139" />
+<table border="0" cellpadding="5" style="margin: auto;"><tbody><tr><td class="col1"><span style="margin-left:20px;">&#3611;&#3637;&#3585;&#3634;&#3619;&#3624;&#3638;&#3585;&#3625;&#3634; : </span></td><td class="col2"><span class="display-Message"> / </span></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634; : </span></td><td class="col2"><span class="display-Message"> </span></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">&#3594;&#3639;&#3656;&#3629;&#3607;&#3640;&#3609;&#3585;&#3634;&#3619;&#3624;&#3638;&#3585;&#3625;&#3634; : </span></td><td class="col2"><span class="display-Message"></span></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">ปีการศึกษา<span class='required'>*</span>: </span></td><td class="col2"><input id="j_id1139:j_id1148" name="j_id1139:j_id1148" type="text" value="0" maxlength="4" onkeypress="return filterInput(1, event, false, '')" style="width:50px;" onblur="this.value = numberFormat(this.value, 0, 'N', '0')" /></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">ภาคการศึกษา<span class='required'>*</span>: </span></td><td class="col2"><select name="j_id1139:j_id1150" size="1" style="width:100px;">	<option value="0" selected="selected">&#3648;&#3621;&#3639;&#3629;&#3585;...</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">S</option>
+</select></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">รายละเอียดกิจกรรม<span class='required'>*</span>: </span></td><td class="col2"><input id="j_id1139:j_id1154" name="j_id1139:j_id1154" type="text" value="" maxlength="200" style="width:300px;" /></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">&#3605;&#3635;&#3649;&#3627;&#3609;&#3656;&#3591; : </span></td><td class="col2"><input id="j_id1139:j_id1156" name="j_id1139:j_id1156" type="text" value="" maxlength="100" style="width:300px;" /></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">&#3627;&#3609;&#3656;&#3623;&#3618;&#3591;&#3634;&#3609; : </span></td><td class="col2"><input id="j_id1139:j_id1158" name="j_id1139:j_id1158" type="text" value="" maxlength="100" style="width:300px;" /></td></tr>
+<tr><td class="col1"><span style="margin-left:20px;">&#3612;&#3641;&#3657;&#3619;&#3633;&#3610;&#3619;&#3629;&#3591; : </span></td><td class="col2"><input id="j_id1139:j_id1160" name="j_id1139:j_id1160" type="text" value="" maxlength="100" style="width:300px;" /></td></tr>
+<tr><td class="col1" colspan="2"><img alt="" class="rich-spacer " height="10" id="j_id1139:j_id1162" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="1" /></td></tr>
+<tr><td class="col1" colspan="2"><div style="width:100%; text-align:center;"><input class="button-navigate" id="j_id1139:j_id1164" name="j_id1139:j_id1164" onclick="A4J.AJAX.Submit('j_id1139',event,{'similarityGroupingId':'j_id1139:j_id1164','parameters':{'j_id1139:j_id1164':'j_id1139:j_id1164'} } );return false;" value="&#3605;&#3585;&#3621;&#3591;" type="button" /><img alt="" class="rich-spacer " height="1" id="j_id1139:j_id1165" src="/NewAcis/faces/a4j/g/3_3_3.Finalimages/spacer.gif" width="10" /><input class="button-navigate" id="j_id1139:j_id1166" name="j_id1139:j_id1166" onclick="A4J.AJAX.Submit('j_id1139',event,{'similarityGroupingId':'j_id1139:j_id1166','parameters':{'j_id1139:j_id1166':'j_id1139:j_id1166'} } );return false;" value="&#3618;&#3585;&#3648;&#3621;&#3636;&#3585;" type="button" /></div></td></tr>
+</tbody></table><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id11" />
+</form></td></tr></table></div></div></div><div class="rich-mpnl-mask-div rich-mpnl-mask-div-transparent" id="activityModalCursorDiv" style="z-index: -200;"><button class="rich-mpnl-button" id="activityModalLastHref"></button></div><script type="text/javascript">new ModalPanel('activityModal',
+				{
+					width: 600,
+					height: -1,
+
+					minWidth: -1,
+					minHeight: -1,
+
+					resizeable: false,
+					moveable: true,
+
+					left: "auto",
+					top: "auto",
+
+					zindex: 100,onresize: '',onmove: '',onshow: '',onhide: '',onbeforeshow: '',onbeforehide: '',
+					domElementAttachment: "",				
+					keepVisualState: false,
+					showWhenRendered: false,
+					selectBehavior: "disable",
+
+					autosized: true,
+					overlapEmbedObjects: false});</script></div><script type="text/javascript"></script></div><div id="sendApplyModal" style="display: none;"><input autocomplete="off" id="sendApplyModalOpenedState" name="sendApplyModalOpenedState" type="hidden" /><div class="rich-modalpanel " id="sendApplyModalContainer" style="position: absolute; display: none; z-index: 100; background-color: inherit;"><div class="rich-mpnl-mask-div-opaque rich-mpnl-mask-div" id="sendApplyModalDiv" style="z-index: -1;"><button class="rich-mpnl-button" id="sendApplyModalFirstHref"></button></div><div class="rich-mpnl-panel"><div class="rich-mp-container" id="sendApplyModalCDiv" style="position: absolute; left: 0px; top: 0px; z-index: 9;"><div class="rich-mpnl-shadow" id="sendApplyModalShadowDiv"></div><div class=" rich-mpnl-content" id="sendApplyModalContentDiv"><div class="rich-mpnl-text rich-mpnl-controls ">
+<form id="j_id1168" name="j_id1168" method="post" action="/NewAcis/secured/studentAffair/scholarship/scholarshipApplicationPage2.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id1168" value="j_id1168" />
+<a href="#" id="j_id1168:j_id1169" name="j_id1168:j_id1169" onclick="A4J.AJAX.Submit('j_id1168',event,{'similarityGroupingId':'j_id1168:j_id1169','parameters':{'j_id1168:j_id1169':'j_id1168:j_id1169'} } );return false;"><img src="/NewAcis/images/close.png" alt="" border="0" /></a><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id11" />
+</form></div><table border="0" cellpadding="0" cellspacing="0" class="rich-mp-content-table" id="sendApplyModalContentTable" style="width: 700px;height: 1px;"><tr style="height: 1%;"><td class="rich-mpnl-header-cell"><div class="rich-mpnl-text rich-mpnl-header " id="sendApplyModalHeader" style="white-space: nowrap;">&#3618;&#3639;&#3656;&#3609;&#3651;&#3610;&#3626;&#3617;&#3633;&#3588;&#3619;</div></td></tr><tr style="height: 99%"><td class="rich-mpnl-body" valign="top">
+<form id="j_id1171" name="j_id1171" method="post" action="/NewAcis/secured/studentAffair/scholarship/scholarshipApplicationPage2.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id1171" value="j_id1171" />
+<table cellpadding="10" style="margin:auto;"><tbody><tr><td><div style="width:100%; text-align:center; font-weight:bold;">&#3651;&#3627;&#3657;&#3626;&#3656;&#3591;&#3648;&#3629;&#3585;&#3626;&#3634;&#3619;&#3616;&#3634;&#3618;&#3651;&#3609;&#3623;&#3633;&#3609;&#3607;&#3637;&#3656;<span class="display-Message">  </span>&#3627;&#3634;&#3585;&#3652;&#3617;&#3656;&#3618;&#3639;&#3656;&#3609;&#3651;&#3610;&#3626;&#3617;&#3633;&#3588;&#3619;&#3607;&#3637;&#3656;&#3648;&#3611;&#3655;&#3609;&#3648;&#3629;&#3585;&#3626;&#3634;&#3619; &#3592;&#3632;&#3606;&#3639;&#3629;&#3623;&#3656;&#3634;&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634;&#3626;&#3621;&#3632;&#3626;&#3636;&#3607;&#3608;&#3636;&#3660;</div></td></tr>
+<tr><td><div style="width:100%; text-align:center;"><input id="j_id1171:j_id1182" name="j_id1171:j_id1182" type="submit" value="&#3614;&#3636;&#3617;&#3614;&#3660;&#3651;&#3610;&#3626;&#3617;&#3633;&#3588;&#3619;" onclick="javascript:target='_blank';" class="button-navigate" /></div></td></tr>
+</tbody></table><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id11" />
+</form></td></tr></table></div></div></div><div class="rich-mpnl-mask-div rich-mpnl-mask-div-transparent" id="sendApplyModalCursorDiv" style="z-index: -200;"><button class="rich-mpnl-button" id="sendApplyModalLastHref"></button></div><script type="text/javascript">new ModalPanel('sendApplyModal',
+				{
+					width: 700,
+					height: -1,
+
+					minWidth: -1,
+					minHeight: -1,
+
+					resizeable: false,
+					moveable: true,
+
+					left: "auto",
+					top: "auto",
+
+					zindex: 100,onresize: '',onmove: '',onshow: '',onhide: '',onbeforeshow: '',onbeforehide: '',
+					domElementAttachment: "",				
+					keepVisualState: false,
+					showWhenRendered: false,
+					selectBehavior: "disable",
+
+					autosized: true,
+					overlapEmbedObjects: false});</script></div><script type="text/javascript"></script></div><a></a>
+		</div>
+		<div id="divFooter"></div>
+	</div><span id="j_id1184"><div id="modalPopupAlert" style="display: none;"><input autocomplete="off" id="modalPopupAlertOpenedState" name="modalPopupAlertOpenedState" type="hidden" /><div class="rich-modalpanel " id="modalPopupAlertContainer" style="position: absolute; display: none; z-index: 16777271; background-color: inherit;"><div class="rich-mpnl-mask-div-opaque rich-mpnl-mask-div" id="modalPopupAlertDiv" style="z-index: -1;"><button class="rich-mpnl-button" id="modalPopupAlertFirstHref"></button></div><div class="rich-mpnl-panel"><div class="rich-mp-container" id="modalPopupAlertCDiv" style="position: absolute; left: 0px; top: 0px; z-index: 9;"><div class="rich-mpnl-shadow" id="modalPopupAlertShadowDiv"></div><div class=" rich-mpnl-content" id="modalPopupAlertContentDiv"><div class="rich-mpnl-text rich-mpnl-controls "><img src="/NewAcis/images/close.png" onclick="onModalCloseClicked()" style="cursor:pointer" alt="" /></div><table border="0" cellpadding="0" cellspacing="0" class="rich-mp-content-table" id="modalPopupAlertContentTable" style="width: 400px;height: 1px;"><tr style="height: 1%;"><td class="rich-mpnl-header-cell"><div class="rich-mpnl-text rich-mpnl-header " id="modalPopupAlertHeader" style="white-space: nowrap;"><span id="modalPopupAlertHead1">&#3612;&#3621;&#3585;&#3634;&#3619;&#3605;&#3619;&#3623;&#3592;&#3626;&#3629;&#3610;</span><span id="modalPopupAlertHead2">&#3612;&#3621;&#3585;&#3634;&#3619;&#3610;&#3633;&#3609;&#3607;&#3638;&#3585;</span></div></td></tr><tr style="height: 99%"><td class="rich-mpnl-body" valign="top">
+			<div style="min-height:30px; min-width:250px; max-height:550px; overflow-y:auto;">
+				<script type="text/javascript">
+			if(jQuery('.infoMessage').length != 0){
+				jQuery('#modalPopupAlertHead2').css('display','inline');
+				jQuery('#modalPopupAlertHead1').css('display','none');
+			}else{
+				jQuery('#modalPopupAlertHead1').css('display','inline');
+				jQuery('#modalPopupAlertHead2').css('display','none');
+			}
+		</script>
+			</div>
+			<div style="width: 100%; text-align: center;">
+				<input type="button" class="button" onclick="onModalCloseClicked()" value="&#3605;&#3585;&#3621;&#3591;" />
+			</div></td></tr></table></div></div></div><div class="rich-mpnl-mask-div rich-mpnl-mask-div-transparent" id="modalPopupAlertCursorDiv" style="z-index: -200;"><button class="rich-mpnl-button" id="modalPopupAlertLastHref"></button></div><script type="text/javascript">new ModalPanel('modalPopupAlert',
+				{
+					width: -1,
+					height: -1,
+
+					minWidth: 400,
+					minHeight: -1,
+
+					resizeable: false,
+					moveable: true,
+
+					left: "auto",
+					top: "auto",
+
+					zindex: 16777271,onresize: '',onmove: '',onshow: '',onhide: '',onbeforeshow: '',onbeforehide: '',
+					domElementAttachment: "",				
+					keepVisualState: false,
+					showWhenRendered: false,
+					selectBehavior: "disable",
+
+					autosized: true,
+					overlapEmbedObjects: false});</script></div><script type="text/javascript"></script></div>
+
+		<script type="text/javascript">
+	<!--
+	var hasMsg = false;
+	
+	function setFocus(id) {
+	    var element = document.getElementById(id);
+	    if (element && !jQuery(element).is(':hidden') && element.focus) {
+	        element.focus();
+	    }
+	}
+	
+	function setHighlight(ids) {
+	    var idsArray = ids.split(",");
+	    for (var i = 0; i < idsArray.length; i++) {
+	        var element = document.getElementById(idsArray[i]);
+	        if (element) {
+	            //jQuery(element).wrap("<div class='highlight'/>");
+	            element.className = 'highlight';
+	        }
+	    }
+	}
+	
+	
+	function onModalCloseClicked(){
+		document.getElementById('modalPopupAlert').component.hide();
+		setHighlight('');
+		setFocus('');
+	}
+	
+	
+	function alertMessage(id){
+		if(hasMsg){
+			document.getElementById('modalPopupAlert').component.show();	
+		}
+	}
+	
+	function showMsg() {
+		alertMessage('');
+	}
+	
+	jQuery('document').ready(function(){
+		jQuery('*').removeClass('highlight');
+		showMsg();
+		
+	});
+
+	var hasError = false;
+
+	function hideModal(modal){
+		if(!hasError){
+			modal.hide();
+		}
+	}
+	
+	
+	function hideModal2(modal){
+		if(!hasError){
+			document.getElementById(modal).component.hide();
+		}
+	}
+-->
+</script></span><div id="modalLoading" style="display: none;"><input autocomplete="off" id="modalLoadingOpenedState" name="modalLoadingOpenedState" type="hidden" /><div class="rich-modalpanel " id="modalLoadingContainer" style="position: absolute; display: none; z-index: 100; background-color: inherit;"><div class="rich-mpnl-mask-div-opaque rich-mpnl-mask-div" id="modalLoadingDiv" style="z-index: -1;"><button class="rich-mpnl-button" id="modalLoadingFirstHref"></button></div><div class="rich-mpnl-panel"><div class="rich-mp-container" id="modalLoadingCDiv" style="position: absolute; left: 0px; top: 0px; z-index: 9;"><div class="rich-mpnl-shadow" id="modalLoadingShadowDiv"></div><div class="rich-mpnl-ovf-hd rich-mpnl-trim rich-mpnl-content" id="modalLoadingContentDiv"><table border="0" cellpadding="0" cellspacing="0" class="rich-mp-content-table" id="modalLoadingContentTable" style="height: 100%; width: 100%;"><tr style="height: 1%;"><td class="rich-mpnl-header-cell"><div class="rich-mpnl-text rich-mpnl-header " id="modalLoadingHeader" style="white-space: nowrap;">&#3585;&#3635;&#3621;&#3633;&#3591;&#3650;&#3627;&#3621;&#3604;.........</div></td></tr><tr style="height: 99%"><td class="rich-mpnl-body" valign="top"><img src="/NewAcis/images/loading-big.gif" alt="" /></td></tr></table></div><div class="rich-mpnl-resizer" id="modalLoadingResizerN" style="width: 40px; height: 4px;"></div><div class="rich-mpnl-resizer" id="modalLoadingResizerE" style="height: 40px; width: 4px;"></div><div class="rich-mpnl-resizer" id="modalLoadingResizerS" style="width: 40px; height: 4px;"></div><div class="rich-mpnl-resizer" id="modalLoadingResizerW" style="height: 40px; width: 4px;"></div><div class="rich-mpnl-resizer" id="modalLoadingResizerNWU" style="width: 40px; height: 4px;"></div><div class="rich-mpnl-resizer" id="modalLoadingResizerNEU" style="height: 40px; width: 4px;"></div><div class="rich-mpnl-resizer" id="modalLoadingResizerNEL" style="width: 40px; height: 4px;"></div><div class="rich-mpnl-resizer" id="modalLoadingResizerSEU" style="height: 40px; width: 4px;"></div><div class="rich-mpnl-resizer" id="modalLoadingResizerSEL" style="width: 40px; height: 4px;"></div><div class="rich-mpnl-resizer" id="modalLoadingResizerSWL" style="height: 40px; width: 4px;"></div><div class="rich-mpnl-resizer" id="modalLoadingResizerSWU" style="width: 40px; height: 4px;"></div><div class="rich-mpnl-resizer" id="modalLoadingResizerNWL" style="height: 40px; width: 4px;"></div></div></div><div class="rich-mpnl-mask-div rich-mpnl-mask-div-transparent" id="modalLoadingCursorDiv" style="z-index: -200;"><button class="rich-mpnl-button" id="modalLoadingLastHref"></button></div><script type="text/javascript">new ModalPanel('modalLoading',
+				{
+					width: 120,
+					height: 150,
+
+					minWidth: -1,
+					minHeight: -1,
+
+					resizeable: true,
+					moveable: true,
+
+					left: "auto",
+					top: "auto",
+
+					zindex: 100,onresize: '',onmove: '',onshow: '',onhide: '',onbeforeshow: '',onbeforehide: '',
+					domElementAttachment: "",				
+					keepVisualState: false,
+					showWhenRendered: false,
+					selectBehavior: "disable",
+
+					autosized: false,
+					overlapEmbedObjects: false});</script></div><script type="text/javascript"></script></div>
+</body>
+</html>
